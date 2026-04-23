@@ -1,0 +1,916 @@
+Transaction_Text,Label
+Zomato food order UPI debit | Ref:2bbc24dc | Amount: INR 77188.27,Food
+Swiggy Instamart grocery debit | Ref:caaac5d2 | Amount: INR 80472.98,Food
+Blinkit quick commerce payment | Ref:9bfe45fe | Amount: INR 79329.27,Food
+BigBasket monthly subscription charge | Ref:fb17c6ad | Amount: INR 69377.11,Food
+Dunzo delivery fee and order | Ref:c0f798ca | Amount: INR 11576.15,Food
+Domino's pizza online order | Ref:badae59e | Amount: INR 47262.71,Food
+McDonald's India card swipe | Ref:b0421fd2 | Amount: INR 61342.83,Food
+KFC dine-in bill payment | Ref:aa5ddaae | Amount: INR 97243.26,Food
+Subway sandwich order UPI | Ref:cce6bbad | Amount: INR 42725.11,Food
+Starbucks coffee reload | Ref:650edaba | Amount: INR 90778.13,Food
+Cafe Coffee Day outlet bill | Ref:5abcbcdc | Amount: INR 31272.73,Food
+Barbeque Nation reservation prepay | Ref:e2fbb9ff | Amount: INR 82999.23,Food
+Haldiram's sweets purchase | Ref:a15a2a99 | Amount: INR 1500.52,Food
+ITC Master Chef frozen foods | Ref:0ce1b5da | Amount: INR 94207.37,Food
+Mother Dairy booth milk debit | Ref:ed36caea | Amount: INR 71000.1,Food
+Nandini milk parlour UPI | Ref:24cfdb1e | Amount: INR 92110.8,Food
+Local kirana store POS debit | Ref:be69bb40 | Amount: INR 10561.46,Food
+Reliance Fresh supermarket bill | Ref:d177a0b7 | Amount: INR 29995.22,Food
+DMart grocery checkout | Ref:72ecb3b9 | Amount: INR 33216.89,Food
+Spencer's Retail food basket | Ref:de184e0b | Amount: INR 82658.88,Food
+Foodpanda order settlement | Ref:9a4fd2bb | Amount: INR 50967.96,Food
+EatSure cloud kitchen debit | Ref:f3c89916 | Amount: INR 33969.21,Food
+Faasos wrap order payment | Ref:5ab9a7a2 | Amount: INR 78489.75,Food
+Thalis and meals cloud kitchen | Ref:bbc5ede8 | Amount: INR 77182.42,Food
+FreshToHome fish and meat order | Ref:cef73ccb | Amount: INR 10911.65,Food
+Licious meat subscription debit | Ref:fcc465c2 | Amount: INR 26064.06,Food
+Box8 meals subscription | Ref:f3faf4db | Amount: INR 27350.21,Food
+Freshmenu salad bowl order | Ref:c66519db | Amount: INR 40901.29,Food
+Behrouz Biryani order | Ref:0202fce7 | Amount: INR 76832.47,Food
+Ovenstory pizza UPI | Ref:dede64af | Amount: INR 86537.31,Food
+Wow Momo kiosk payment | Ref:fcee8e7a | Amount: INR 43086.61,Food
+Chaayos tea and snacks | Ref:0f6fb2a7 | Amount: INR 88953.25,Food
+Third Wave Coffee roasters | Ref:b7cf2d22 | Amount: INR 34950.52,Food
+Blue Tokai coffee beans order | Ref:ee0c7859 | Amount: INR 21720.83,Food
+Instamart late night snacks | Ref:2beef853 | Amount: INR 2418.35,Food
+Zepto 10 min grocery | Ref:6a56edcc | Amount: INR 64087.98,Food
+JioMart grocery UPI collect | Ref:fb5da6e0 | Amount: INR 96348.3,Food
+More supermarket self checkout | Ref:afeced8f | Amount: INR 93679.37,Food
+Foodhall gourmet purchase | Ref:5c747eca | Amount: INR 77705.32,Food
+Nature's Basket organic bill | Ref:c4d3debc | Amount: INR 69217.05,Food
+Amazon Fresh grocery order | Ref:be18a3af | Amount: INR 1925.51,Food
+Flipkart Supermart staples | Ref:4cccf8fb | Amount: INR 63481.32,Food
+Metro Cash and Carry wholesale | Ref:3b1a750d | Amount: INR 77569.05,Food
+Restaurant bill via Paytm | Ref:36b7f4a0 | Amount: INR 59733.47,Food
+UPI collect request from hotel kitchen | Ref:a9bdff3b | Amount: INR 17791.32,Food
+Tiffin service monthly debit | Ref:b3dbde08 | Amount: INR 36323.5,Food
+Catering advance for function | Ref:43d2fadf | Amount: INR 37622.32,Food
+Sweet shop festival order | Ref:de7e2bcf | Amount: INR 44974.77,Food
+Ice cream parlour card tap | Ref:c1b1a6a4 | Amount: INR 32093.7,Food
+Bakery bread and cake order | Ref:b7dfc83b | Amount: INR 21780.4,Food
+Cloud kitchen aggregator payout | Ref:f7b9b83a | Amount: INR 64740.05,Food
+Street food vendor UPI | Ref:25c7c93d | Amount: INR 23169.74,Food
+College canteen wallet top-up | Ref:fc26a80f | Amount: INR 66439.62,Food
+Office cafeteria meal pass | Ref:7eedceec | Amount: INR 20771.26,Food
+Airport lounge food charge | Ref:77ef0c57 | Amount: INR 63512.8,Food
+Railway station food plaza | Ref:9bad7042 | Amount: INR 83929.17,Food
+Highway toll plaza food court | Ref:504a6d1f | Amount: INR 53143.01,Food
+Movie multiplex popcorn combo | Ref:0274ad36 | Amount: INR 55963.0,Food
+Stadium snack counter debit | Ref:fec2594a | Amount: INR 97368.72,Food
+Hospital canteen recharge | Ref:fee77d5d | Amount: INR 82656.96,Food
+Temple prasad counter donation food | Ref:0a0b5a46 | Amount: INR 82980.27,Food
+Wedding hall catering advance | Ref:84191fef | Amount: INR 75464.08,Food
+Corporate lunch Sodexo meal | Ref:6a1bb767 | Amount: INR 17942.6,Food
+Zomato Gold membership food benefit | Ref:fc35edb8 | Amount: INR 10584.11,Food
+Swiggy One membership fee | Ref:d4a4bbbb | Amount: INR 26749.78,Food
+Uber Eats order (legacy) | Ref:dacc7f8d | Amount: INR 53156.04,Food
+Food aggregator cashback reversal | Ref:3cfa2be1 | Amount: INR 65704.4,Food
+Grocery cashback wallet debit | Ref:0be35b7a | Amount: INR 18474.96,Food
+Milk subscription daily debit | Ref:143eac04 | Amount: INR 35945.74,Food
+Vegetable mandi UPI payment | Ref:baa37f00 | Amount: INR 9432.26,Food
+Fish market vendor collect | Ref:cfb5a34b | Amount: INR 41719.02,Food
+Egg tray wholesale debit | Ref:9c34f43f | Amount: INR 41633.71,Food
+Atta chakki grinding charges | Ref:9cffd9ed | Amount: INR 9147.7,Food
+Juice bar detox cleanse | Ref:da21fd33 | Amount: INR 63191.94,Food
+Salad subscription weekly | Ref:4ef0feeb | Amount: INR 28366.53,Food
+Protein shake brand debit | Ref:80bdca3b | Amount: INR 55178.05,Food
+Energy bar vending machine | Ref:faddee75 | Amount: INR 67218.03,Food
+Midnight snack delivery | Ref:a7cbb260 | Amount: INR 58184.71,Food
+Hostel mess fee deduction | Ref:1ec8ecaa | Amount: INR 2281.05,Food
+PG mess monthly food charge | Ref:d222b5fa | Amount: INR 7117.31,Food
+Co-working pantry snacks | Ref:d2fdf6a7 | Amount: INR 88332.6,Food
+Startup office pantry restock | Ref:f8bc9ad9 | Amount: INR 75753.32,Food
+Team lunch reimbursement debit | Ref:cca0e80a | Amount: INR 13921.54,Food
+Client dinner restaurant bill | Ref:5b59a0db | Amount: INR 93893.86,Food
+Business lunch card charge | Ref:28413822 | Amount: INR 97510.3,Food
+Airline meal pre-book debit | Ref:8045bbe1 | Amount: INR 16611.52,Food
+Train pantry car order | Ref:e4cbcdc0 | Amount: INR 94556.76,Food
+Bus journey snack pack | Ref:ffcbefdf | Amount: INR 64109.57,Food
+Ferry canteen purchase | Ref:f12e60d0 | Amount: INR 91101.07,Food
+Resort buffet breakfast charge | Ref:1fccbba1 | Amount: INR 34750.99,Food
+Hotel room service dinner | Ref:ba5081e3 | Amount: INR 23424.82,Food
+Minibar consumption charge | Ref:cb76e327 | Amount: INR 73691.52,Food
+Cook salary advance food budget | Ref:2ecbcaff | Amount: INR 31837.1,Food
+Maid grocery shopping debit | Ref:a208fa9c | Amount: INR 50521.17,Food
+Festival sweets bulk order | Ref:7ade5856 | Amount: INR 66571.94,Food
+Diwali mithai box purchase | Ref:ec6bf7af | Amount: INR 58155.15,Food
+Holi thandai supplies | Ref:5aedbe22 | Amount: INR 60426.5,Food
+Christmas cake order | Ref:685963d0 | Amount: INR 57894.8,Food
+Eid biryani bulk order | Ref:2c9186aa | Amount: INR 81858.67,Food
+Navratri fasting food pack | Ref:5a9663d0 | Amount: INR 21107.02,Food
+Pongal sugarcane and jaggery | Ref:ffa8de32 | Amount: INR 38012.25,Food
+Onam sadya catering | Ref:de8d6bff | Amount: INR 34320.27,Food
+Baisakhi langar donation food | Ref:e5b0d439 | Amount: INR 57226.24,Food
+Ganesh Chaturthi modak order | Ref:98a160d7 | Amount: INR 29431.99,Food
+Janmashtami milk sweets | Ref:9fdbce6e | Amount: INR 94249.41,Food
+Rakhi family dinner bill | Ref:bc78499d | Amount: INR 89601.33,Food
+New year party catering | Ref:cbc8cd05 | Amount: INR 17318.91,Food
+Birthday cake custom order | Ref:dab94012 | Amount: INR 21502.63,Food
+Anniversary dinner fine dining | Ref:2ddfd97d | Amount: INR 9634.63,Food
+Date night restaurant UPI | Ref:173d22cd | Amount: INR 54667.25,Food
+Brunch cafe weekend debit | Ref:ad273ac2 | Amount: INR 98306.88,Food
+High tea lounge charge | Ref:b9e2f9f9 | Amount: INR 6154.82,Food
+Wine shop permit payment | Ref:aaf891fb | Amount: INR 41893.23,Food
+Beer pub tab settlement | Ref:73cdb5bb | Amount: INR 68480.55,Food
+Microbrewery tasting flight | Ref:8a9dcd7c | Amount: INR 85390.8,Food
+Food blogger shoot expenses | Ref:6ad390db | Amount: INR 28663.7,Food
+Recipe box subscription debit | Ref:ad4ea97b | Amount: INR 93843.96,Food
+Meal kit delivery weekly | Ref:6d5ed77e | Amount: INR 62870.88,Food
+Frozen momos wholesale | Ref:e89a828c | Amount: INR 42480.95,Food
+Momos stall evening rush | Ref:ecc7a875 | Amount: INR 47323.18,Food
+Pani puri cart UPI | Ref:7add6fb2 | Amount: INR 32669.85,Food
+Chaat corner bill | Ref:56df0413 | Amount: INR 69845.4,Food
+South Indian meals thali | Ref:efb2dbd6 | Amount: INR 10754.25,Food
+North Indian thali combo | Ref:92fdb1ca | Amount: INR 38305.77,Food
+Biryani bucket family pack | Ref:3fc0a6ec | Amount: INR 82231.55,Food
+Dosa batter subscription | Ref:9e93ef38 | Amount: INR 4923.34,Food
+Idli sambar breakfast combo | Ref:9cc9db6b | Amount: INR 78455.91,Food
+Paratha breakfast tiffin | Ref:95ab37af | Amount: INR 3173.58,Food
+Poha and jalebi breakfast | Ref:2a181f8e | Amount: INR 27317.13,Food
+Misal pav outlet debit | Ref:472b2bfa | Amount: INR 34328.8,Food
+Vada pav stall Mumbai | Ref:b33cf8ca | Amount: INR 18916.58,Food
+Pav bhaji beach stall | Ref:aeaedd6f | Amount: INR 52688.99,Food
+Kathi roll Kolkata street | Ref:f7efaee3 | Amount: INR 44812.37,Food
+Momos Darjeeling style | Ref:def42fc1 | Amount: INR 31228.63,Food
+Chole bhature Delhi outlet | Ref:6ffce69d | Amount: INR 64476.73,Food
+Rajma chawal home delivery | Ref:e0f4d75f | Amount: INR 82588.36,Food
+Dal makhani butter naan set | Ref:fbd0ccaf | Amount: INR 67998.36,Food
+Tandoori chicken grill order | Ref:1ed4ecbb | Amount: INR 52979.57,Food
+Fish curry coastal meal | Ref:aedb9e1d | Amount: INR 46595.9,Food
+Prawn fry restaurant bill | Ref:da2ecf55 | Amount: INR 22310.41,Food
+Crab masala seasonal special | Ref:4faf2ab7 | Amount: INR 38858.04,Food
+Mutton biryani premium | Ref:bebf6699 | Amount: INR 43024.87,Food
+Chicken tikka platter | Ref:91884bda | Amount: INR 94324.93,Food
+Paneer tikka starter | Ref:56fabc71 | Amount: INR 19258.47,Food
+Veg platter buffet | Ref:513f468c | Amount: INR 4342.09,Food
+Jain meal special order | Ref:6fd621cb | Amount: INR 33189.33,Food
+Vegan bowl salad bar | Ref:badba92f | Amount: INR 11844.51,Food
+Gluten free bakery order | Ref:1d57c64d | Amount: INR 26701.8,Food
+Keto meal plan subscription | Ref:eec6aabf | Amount: INR 73086.37,Food
+Diabetic friendly meal kit | Ref:a2b83fd8 | Amount: INR 55074.74,Food
+Baby food formula purchase | Ref:0c1df062 | Amount: INR 2189.61,Food
+Senior citizen soft diet meal | Ref:10e91ada | Amount: INR 95600.08,Food
+Hospital patient diet tray | Ref:0946faff | Amount: INR 9601.64,Food
+Gym protein shake bar | Ref:9fcd6510 | Amount: INR 2918.15,Food
+Yoga retreat meals package | Ref:be16d003 | Amount: INR 19485.59,Food
+Marathon energy gel pack | Ref:9192d3de | Amount: INR 8159.02,Food
+Trekking packed meals | Ref:f90fbbc9 | Amount: INR 2123.32,Food
+Camping freeze dried food | Ref:7afcd4c1 | Amount: INR 86435.43,Food
+Airbnb host grocery stock | Ref:4acff298 | Amount: INR 86144.46,Food
+Homestay breakfast charge | Ref:2cddefee | Amount: INR 46437.52,Food
+Co-living kitchen supplies | Ref:75d18fb2 | Amount: INR 49146.87,Food
+PG owner mess charges | Ref:bbfbc4c2 | Amount: INR 26311.73,Food
+Landlord utility food share | Ref:affe35ba | Amount: INR 40131.62,Food
+Splitwise settled food dues | Ref:bb30edf0 | Amount: INR 72010.24,Food
+Friends group dinner split | Ref:f2f33a23 | Amount: INR 22125.03,Food
+Office team pizza party | Ref:afbfdf01 | Amount: INR 98401.93,Food
+Farewell cake and snacks | Ref:2fcc022e | Amount: INR 5486.94,Food
+Welcome kit snacks for new hire | Ref:25d73dd9 | Amount: INR 93163.26,Food
+Conference tea coffee service | Ref:faebe80b | Amount: INR 9515.98,Food
+Seminar lunch box order | Ref:c822b710 | Amount: INR 16495.86,Food
+Workshop high tea catering | Ref:48acd752 | Amount: INR 29203.24,Food
+Hackathon midnight pizza | Ref:8771da2a | Amount: INR 96618.71,Food
+College fest food stall | Ref:14da1fda | Amount: INR 94480.46,Food
+Tech meetup snacks sponsor | Ref:2ac4d178 | Amount: INR 58608.4,Food
+NGO food drive supplies | Ref:c8ba7480 | Amount: INR 90453.69,Food
+Blood donation camp refreshments | Ref:e373738f | Amount: INR 8397.92,Food
+Marathon aid station supplies | Ref:b3ecbf6c | Amount: INR 84824.96,Food
+School annual day snacks | Ref:24ba14ba | Amount: INR 89094.78,Food
+PTA meeting tea biscuits | Ref:234bbe8a | Amount: INR 88614.87,Food
+Sports day juice boxes | Ref:ba86063c | Amount: INR 51239.31,Food
+Exam hall water bottles bulk | Ref:7e5a9c1f | Amount: INR 60540.51,Food
+Library cafe latte | Ref:dda5d80c | Amount: INR 90681.4,Food
+Museum cafe sandwich | Ref:a45fe768 | Amount: INR 93432.33,Food
+Zoo kiosk ice cream | Ref:097544ab | Amount: INR 66338.7,Food
+Aquarium cafe kids meal | Ref:3ba2de85 | Amount: INR 39424.72,Food
+Theme park meal voucher | Ref:db0536bc | Amount: INR 90451.05,Food
+Water park locker snack | Ref:c8e07be7 | Amount: INR 40361.75,Food
+Ski resort hot chocolate | Ref:61c3edc3 | Amount: INR 17896.65,Food
+Hill station maggi stall | Ref:cb9c5efa | Amount: INR 11177.61,Food
+Beach shack coconut water | Ref:0cdae0ab | Amount: INR 16561.85,Food
+River rafting packed lunch | Ref:0aedbf3d | Amount: INR 25811.17,Food
+Wildlife safari packed meal | Ref:4a3fab65 | Amount: INR 6288.3,Food
+Desert camp dinner under stars | Ref:a99b5349 | Amount: INR 46805.9,Food
+Houseboat Kerala meals | Ref:9d128fca | Amount: INR 28640.07,Food
+Cruise deck dining charge | Ref:9bf8273b | Amount: INR 58323.0,Food
+Flight meal voucher debit | Ref:0432989c | Amount: INR 96252.37,Food
+Lounge access with meal | Ref:3c44a3ca | Amount: INR 48211.9,Food
+Priority pass dining credit | Ref:80f2ad33 | Amount: INR 48417.22,Food
+Credit card dining offer cashback reversal | Ref:387c42f4 | Amount: INR 32216.54,Food
+Debit card tap at food court | Ref:9bfd50c1 | Amount: INR 36993.15,Food
+NFC payment at bakery | Ref:e60d97d6 | Amount: INR 72856.77,Food
+QR scan at juice shop | Ref:e0df7dbf | Amount: INR 11088.64,Food
+UPI intent at restaurant | Ref:b1b95fcc | Amount: INR 88286.79,Food
+UPI collect from dhaba | Ref:bddcbe9e | Amount: INR 1634.98,Food
+PhonePe merchant food | Ref:1cfcfee6 | Amount: INR 6473.98,Food
+Google Pay merchant grocery | Ref:27aa5d21 | Amount: INR 65894.12,Food
+Paytm QR kirana payment | Ref:7cacdcec | Amount: INR 54237.53,Food
+Amazon Pay UPI food order | Ref:bca6d516 | Amount: INR 21866.2,Food
+Cred pay food offer debit | Ref:d48c97f9 | Amount: INR 32238.09,Food
+Slice card food cashback net | Ref:e3a5f0cf | Amount: INR 49452.58,Food
+OneCard dining rewards debit | Ref:a8b79b37 | Amount: INR 52578.79,Food
+Fi money card cafe spend | Ref:7a1bff5e | Amount: INR 39367.9,Food
+Jupiter neo bank UPI food | Ref:4a79f3ee | Amount: INR 53319.8,Food
+Niyo global card meal abroad | Ref:2641dee4 | Amount: INR 2902.36,Food
+Forex card restaurant charge | Ref:698ebb8c | Amount: INR 53009.59,Food
+Multi currency wallet food | Ref:6bf191ce | Amount: INR 64191.69,Food
+IRCTC e-ticket booking debit | Ref:1e9d95f4 | Amount: INR 57511.1,Travel
+IRCTC Tatkal convenience fee | Ref:c768abae | Amount: INR 34543.91,Travel
+RedBus intercity bus booking | Ref:92af6863 | Amount: INR 14545.89,Travel
+AbhiBus online ticket | Ref:fe4cc2fc | Amount: INR 2295.05,Travel
+MakeMyTrip flight booking | Ref:38dab91a | Amount: INR 50969.6,Travel
+Cleartrip domestic airfare | Ref:a5cfb2db | Amount: INR 88805.79,Travel
+Goibibo hotel plus flight combo | Ref:7a908f6b | Amount: INR 89832.37,Travel
+Yatra corporate travel booking | Ref:feeff91c | Amount: INR 48713.06,Travel
+EaseMyTrip holiday package | Ref:71d56b19 | Amount: INR 51351.98,Travel
+Ixigo trains app booking | Ref:e86c3113 | Amount: INR 13678.4,Travel
+Uber India ride hail | Ref:1aa0baab | Amount: INR 98147.35,Travel
+Ola postpaid ride settlement | Ref:76a12e8d | Amount: INR 17740.42,Travel
+Rapido bike taxi debit | Ref:daf49ed6 | Amount: INR 75642.56,Travel
+BluSmart EV cab charge | Ref:f67274d9 | Amount: INR 39881.56,Travel
+Meru Cabs airport pickup | Ref:abf61f44 | Amount: INR 16383.96,Travel
+Mega Cabs city ride | Ref:a8fedda2 | Amount: INR 17199.53,Travel
+Quick Ride carpool debit | Ref:95d040b6 | Amount: INR 51270.21,Travel
+Shuttle app office commute | Ref:6eccfc4c | Amount: INR 86806.49,Travel
+Metro card recharge DMRC | Ref:bae26d7a | Amount: INR 85903.6,Travel
+BEST bus pass monthly | Ref:d1be83e1 | Amount: INR 13523.16,Travel
+BMTC bus pass Bengaluru | Ref:f3bfd8d1 | Amount: INR 66841.0,Travel
+NMMT ferry ticket Mumbai | Ref:bf3ddfb7 | Amount: INR 91673.64,Travel
+Mumbai local season ticket | Ref:d1a1f7bb | Amount: INR 34940.95,Travel
+Delhi metro smart card top-up | Ref:c972bb1f | Amount: INR 61892.18,Travel
+Chennai metro QR ticket | Ref:968df933 | Amount: INR 83499.08,Travel
+Hyderabad metro pass | Ref:bb5e387d | Amount: INR 3398.16,Travel
+Kochi metro travel card | Ref:c35b4b7b | Amount: INR 70739.54,Travel
+Namma Metro Bengaluru top-up | Ref:09e2b857 | Amount: INR 55149.55,Travel
+FASTag toll plaza debit | Ref:55a67dd7 | Amount: INR 92192.17,Travel
+NHAI toll recharge wallet | Ref:a7dacdeb | Amount: INR 45763.36,Travel
+Paytm FASTag top-up | Ref:a48df905 | Amount: INR 35962.2,Travel
+HPCL fuel pump card swipe | Ref:c90aa1a2 | Amount: INR 67258.02,Travel
+IndianOil fuel UPI | Ref:e4ae835b | Amount: INR 79727.31,Travel
+BPCL Speed fuel debit | Ref:fbaf9aa0 | Amount: INR 911.81,Travel
+Shell petrol pump charge | Ref:183a2663 | Amount: INR 29125.26,Travel
+CNG station refill bill | Ref:4db526fa | Amount: INR 39993.14,Travel
+EV charging station session | Ref:6e3e27d8 | Amount: INR 63693.4,Travel
+Ather grid charging debit | Ref:a9bebf0c | Amount: INR 90235.57,Travel
+Tata Power EZ charge | Ref:1eabc443 | Amount: INR 58769.93,Travel
+Statiq EV charging UPI | Ref:0ead4170 | Amount: INR 96742.92,Travel
+Zoomcar self drive rental | Ref:82ddf659 | Amount: INR 44692.73,Travel
+Revv subscription car day | Ref:babeea99 | Amount: INR 6265.87,Travel
+Drivezy bike rental | Ref:dd46f9f0 | Amount: INR 42998.45,Travel
+Bounce scooter rental | Ref:ce7a676a | Amount: INR 18580.02,Travel
+Vogo scooter unlock fee | Ref:daaa9ef4 | Amount: INR 94723.53,Travel
+Yulu bike unlock and ride | Ref:b52e2bc4 | Amount: INR 46987.75,Travel
+Metro bike share Bengaluru | Ref:416ed624 | Amount: INR 10276.41,Travel
+Chalo bus live ticket | Ref:eaaf6fef | Amount: INR 63634.85,Travel
+Tummoc multimodal ticket | Ref:15a7bdef | Amount: INR 36906.8,Travel
+Navi Mumbai ferry ticket | Ref:dfe79a29 | Amount: INR 4091.16,Travel
+Pawan Hans helicopter booking | Ref:e3e384d4 | Amount: INR 44070.01,Travel
+SpiceJet add-on baggage | Ref:9dd18ea1 | Amount: INR 26907.51,Travel
+IndiGo seat selection fee | Ref:c2b6eddb | Amount: INR 92006.15,Travel
+Air India web check-in | Ref:afeadd27 | Amount: INR 63259.54,Travel
+Vistara club upgrade | Ref:052b6ce0 | Amount: INR 79740.54,Travel
+Akasa Air meal pre-order | Ref:3bdef6dd | Amount: INR 97411.95,Travel
+AirAsia ancillary charge | Ref:d6f729ae | Amount: INR 52746.5,Travel
+Blade India heli shuttle | Ref:942d1abd | Amount: INR 95937.61,Travel
+Charter flight deposit | Ref:cfa0fdcf | Amount: INR 58257.17,Travel
+Ola outstation trip | Ref:8f283c29 | Amount: INR 63595.22,Travel
+Uber intercity reserve | Ref:9da6accc | Amount: INR 73355.48,Travel
+Savaari cab booking | Ref:be572f70 | Amount: INR 25402.52,Travel
+Wiwigo outstation taxi | Ref:57ec9044 | Amount: INR 8868.93,Travel
+Savaari driver tip UPI | Ref:9b8bdb8e | Amount: INR 10006.97,Travel
+Railway retiring room booking | Ref:f93e5257 | Amount: INR 18384.11,Travel
+IRCTC lounge access | Ref:a9400ddc | Amount: INR 96685.74,Travel
+Airport prepaid taxi coupon | Ref:ae86bb01 | Amount: INR 49774.64,Travel
+Meru airport flat rate | Ref:0f2df185 | Amount: INR 91451.88,Travel
+KSRTC Volvo online ticket | Ref:da25b3cb | Amount: INR 48230.88,Travel
+RSRTC sleeper bus | Ref:eb05c5e1 | Amount: INR 11424.76,Travel
+GSRTC express booking | Ref:c5ad48c0 | Amount: INR 9078.84,Travel
+APSRTC Amaravati bus | Ref:34df8930 | Amount: INR 32185.19,Travel
+TNSTC SETC booking | Ref:7ca532f0 | Amount: INR 66265.78,Travel
+KSRTC Swift booking | Ref:b1991f9f | Amount: INR 24747.84,Travel
+HRTC Volvo Manali | Ref:1ec2ffec | Amount: INR 17145.49,Travel
+JKSRTC Srinagar route | Ref:4b7ebbea | Amount: INR 37013.03,Travel
+NEKRTC night service | Ref:bc4cb2f3 | Amount: INR 29062.91,Travel
+WBTC electric bus ticket | Ref:df6fd5b6 | Amount: INR 46608.26,Travel
+DTC cluster bus pass | Ref:a2eccdb9 | Amount: INR 74280.82,Travel
+Chandigarh CTU pass | Ref:adc2df4d | Amount: INR 33549.63,Travel
+PMPML Pune bus pass | Ref:32eab9a3 | Amount: INR 62470.33,Travel
+MSRTC Shivneri booking | Ref:52794dc2 | Amount: INR 83884.36,Travel
+VRL Travels luxury bus | Ref:effddc67 | Amount: INR 61671.2,Travel
+SRS Travels sleeper | Ref:f5171b60 | Amount: INR 52812.45,Travel
+Orange Travels AC bus | Ref:adf6ece1 | Amount: INR 62332.96,Travel
+Parveen Travels Tamil Nadu | Ref:200ca5be | Amount: INR 3461.31,Travel
+Kallada Travels Kerala | Ref:dca6f1b7 | Amount: INR 86831.82,Travel
+Rajasthan Roadways booking | Ref:7a12c830 | Amount: INR 63297.86,Travel
+Himachal Roadways ticket | Ref:86040a68 | Amount: INR 29551.64,Travel
+Uttarakhand transport booking | Ref:a97573ef | Amount: INR 6000.48,Travel
+Sikkim nationalised transport | Ref:f0c74a0f | Amount: INR 1309.66,Travel
+Assam ASTC online ticket | Ref:f2fadd09 | Amount: INR 88494.91,Travel
+Meghalaya transport booking | Ref:2a2acb6d | Amount: INR 5652.27,Travel
+Manipur MSRTC booking | Ref:8c5144f0 | Amount: INR 63535.99,Travel
+Tripura ST booking | Ref:355d2974 | Amount: INR 3703.91,Travel
+Mizoram ST online | Ref:88f4cde8 | Amount: INR 35221.45,Travel
+Nagaland ST booking | Ref:f9eacda6 | Amount: INR 29116.55,Travel
+Arunachal HRTC booking | Ref:e20bf2cc | Amount: INR 31967.68,Travel
+Ladakh inner line permit fee | Ref:8fd0a5e6 | Amount: INR 26991.28,Travel
+Andaman ferry ticket Port Blair | Ref:43d97a9e | Amount: INR 26770.07,Travel
+Lakshadweep ship booking | Ref:b7642c5f | Amount: INR 7518.11,Travel
+Goa Mopa airport taxi | Ref:45aa23de | Amount: INR 52094.18,Travel
+Goa Dabolim prepaid taxi | Ref:7cdd1cc6 | Amount: INR 36248.93,Travel
+Shimla toy train ticket | Ref:939f7ff2 | Amount: INR 20653.55,Travel
+Darjeeling Himalayan Railway | Ref:89ea8877 | Amount: INR 14344.37,Travel
+Nilgiri Mountain Railway ticket | Ref:7194e9ee | Amount: INR 35220.03,Travel
+Konkan railway tatkal | Ref:b62a97bd | Amount: INR 28200.78,Travel
+Vande Bharat premium charge | Ref:2ab70fa5 | Amount: INR 41023.91,Travel
+Rajdhani pantry car bill | Ref:d0e4daf8 | Amount: INR 66954.75,Travel
+Shatabdi catering charge | Ref:5a6add3d | Amount: INR 53918.16,Travel
+Tejas express meal | Ref:5b73abe3 | Amount: INR 52349.25,Travel
+Garib Rath bedding charge | Ref:edcbde3d | Amount: INR 61444.86,Travel
+Sleeper class linen optional | Ref:417e9f03 | Amount: INR 47908.41,Travel
+AC 3 tier upgrade fee | Ref:7d193559 | Amount: INR 23173.99,Travel
+Tatkal agent service charge | Ref:c4bcbdce | Amount: INR 61414.06,Travel
+Railway retiring room AC | Ref:f8fa9e07 | Amount: INR 27758.56,Travel
+Station cloak room charge | Ref:dcb534a8 | Amount: INR 40700.18,Travel
+Platform ticket digital | Ref:b7cfeafa | Amount: INR 91595.06,Travel
+Suburban railway quarterly pass | Ref:ea45fc5b | Amount: INR 39932.72,Travel
+Mumbai monorail token | Ref:8afb1925 | Amount: INR 92716.91,Travel
+Kolkata tram museum ticket | Ref:c678f2ba | Amount: INR 13635.24,Travel
+Heritage toy train Darjeeling | Ref:ee1ab20f | Amount: INR 88899.69,Travel
+Ropeway Manali ticket | Ref:50aa5dd0 | Amount: INR 55792.45,Travel
+Cable car Gulmarg | Ref:d1c67a6e | Amount: INR 96251.47,Travel
+Gondola ride booking | Ref:8adf88bb | Amount: INR 22370.77,Travel
+Houseboat Alleppey advance | Ref:b65ff550 | Amount: INR 33606.91,Travel
+Backwater cruise Kochi | Ref:6d12e686 | Amount: INR 52406.47,Travel
+Wildlife safari jeep booking | Ref:30309ad0 | Amount: INR 73530.99,Travel
+Desert camel ride Jaisalmer | Ref:22cacdec | Amount: INR 66705.88,Travel
+Paragliding billing advance | Ref:ba1bacf9 | Amount: INR 54651.0,Travel
+Scuba diving Andaman slot | Ref:fedf89a0 | Amount: INR 4503.22,Travel
+Snorkelling Havelock booking | Ref:abddc207 | Amount: INR 40620.88,Travel
+Trekking permit fee Uttarakhand | Ref:dc87cef1 | Amount: INR 34099.17,Travel
+Forest entry fee Jim Corbett | Ref:4523b7cc | Amount: INR 60553.53,Travel
+National park gypsy booking | Ref:d58d85fe | Amount: INR 11507.47,Travel
+Wildlife guide fee debit | Ref:e5ebaf3a | Amount: INR 74410.16,Travel
+Border area permit Sikkim | Ref:8f5bffd4 | Amount: INR 81805.68,Travel
+Inner line permit Ladakh bike | Ref:a9b520ac | Amount: INR 49210.2,Travel
+Bike rental Leh Ladakh | Ref:133cbc3f | Amount: INR 60491.97,Travel
+Royal Enfield bullet rental | Ref:bdceba5b | Amount: INR 26134.83,Travel
+Self drive car Spiti | Ref:f0a66bfd | Amount: INR 95839.76,Travel
+Tempo traveller hire Manali | Ref:ead3b3c2 | Amount: INR 88529.85,Travel
+Innova crysta outstation | Ref:a0e1fafc | Amount: INR 47839.22,Travel
+Innova airport drop prepaid | Ref:29945dc0 | Amount: INR 90560.13,Travel
+Corporate cab monthly invoice | Ref:4ed00719 | Amount: INR 69388.96,Travel
+Employee transport shuttle fee | Ref:73f643b9 | Amount: INR 75542.5,Travel
+Parking multilevel mall | Ref:c9a2afba | Amount: INR 24972.19,Travel
+Airport parking P2 long stay | Ref:b2fd8a11 | Amount: INR 22286.28,Travel
+Railway parking prepaid | Ref:8252af7e | Amount: INR 25616.62,Travel
+Bus stand cloak room | Ref:f9a0fcda | Amount: INR 77152.25,Travel
+Toll plaza monthly pass | Ref:ae4e5d70 | Amount: INR 25640.86,Travel
+Expressway FASTag debit | Ref:a672f0ff | Amount: INR 63655.75,Travel
+Yamuna expressway toll | Ref:2c4fa6b7 | Amount: INR 81787.12,Travel
+Mumbai Pune expressway toll | Ref:4fe4a3ee | Amount: INR 48170.42,Travel
+Bangalore Mysore highway toll | Ref:6f8c3b3d | Amount: INR 28285.35,Travel
+Chennai toll plaza debit | Ref:cae0da74 | Amount: INR 4006.36,Travel
+Hyderabad ORR toll | Ref:4ca7e90c | Amount: INR 35203.29,Travel
+Delhi NCR toll tags | Ref:5b5c0b29 | Amount: INR 88113.83,Travel
+Gurgaon toll plaza charge | Ref:f6fe09e8 | Amount: INR 38828.88,Travel
+Noida expressway toll | Ref:6bfd1c5b | Amount: INR 26265.35,Travel
+Jewar airport toll | Ref:1f8e83bf | Amount: INR 19160.41,Travel
+Sea link toll Mumbai | Ref:5baadc2a | Amount: INR 33344.27,Travel
+Bandra Worli sea link | Ref:e93d41f7 | Amount: INR 61347.77,Travel
+Eastern freeway toll | Ref:67cdab99 | Amount: INR 20433.98,Travel
+Western express highway toll | Ref:0cd53f65 | Amount: INR 33004.28,Travel
+Eastern peripheral expressway | Ref:fa70d3ef | Amount: INR 20314.45,Travel
+Delhi Meerut expressway toll | Ref:a22c371a | Amount: INR 87854.07,Travel
+Purvanchal expressway toll | Ref:abee8aff | Amount: INR 93028.1,Travel
+Agra Lucknow expressway toll | Ref:fc9dacbc | Amount: INR 46452.96,Travel
+Mumbai Goa highway toll | Ref:8d1d3a9e | Amount: INR 79918.62,Travel
+Bangalore Chennai toll | Ref:c2872768 | Amount: INR 66840.01,Travel
+Visakhapatnam Araku ghat toll | Ref:e9a6eb23 | Amount: INR 20153.9,Travel
+Shillong Cherrapunji road toll | Ref:b7e1be58 | Amount: INR 29992.15,Travel
+Guwahati Kaziranga toll | Ref:96f43640 | Amount: INR 5209.81,Travel
+Kochi Munnar ghat toll | Ref:cdccaf7a | Amount: INR 63947.4,Travel
+Ooty ghat road toll | Ref:3e21f8ea | Amount: INR 84689.92,Travel
+Kodaikanal hairpin toll | Ref:bf6ababb | Amount: INR 41139.47,Travel
+Valparai hairpin bus toll | Ref:66baaaab | Amount: INR 80616.1,Travel
+Amazon.in marketplace order | Ref:4646be32 | Amount: INR 90289.5,Shopping
+Flipkart Big Billion Days order | Ref:baa2aee6 | Amount: INR 95469.36,Shopping
+Myntra fashion sale debit | Ref:3e0dabcf | Amount: INR 78188.75,Shopping
+Ajio style club purchase | Ref:fbd1b25e | Amount: INR 77571.39,Shopping
+Nykaa beauty order | Ref:fcedeca6 | Amount: INR 11412.35,Shopping
+Purplle cosmetics debit | Ref:987b3bc4 | Amount: INR 54864.98,Shopping
+Tata CLiQ electronics | Ref:baa8eb3d | Amount: INR 32829.2,Shopping
+Reliance Digital EMI down payment | Ref:beff1d0f | Amount: INR 22158.62,Shopping
+Croma store POS debit | Ref:ae2ade68 | Amount: INR 80358.53,Shopping
+Vijay Sales TV purchase | Ref:e4858d4a | Amount: INR 92741.78,Shopping
+Poorvika mobiles debit | Ref:ecf97de1 | Amount: INR 60399.35,Shopping
+Sangeetha mobiles Chennai | Ref:4374c2c4 | Amount: INR 87315.16,Shopping
+UniverCell accessories | Ref:eb58b3fc | Amount: INR 30643.0,Shopping
+MobileNXT repair parts | Ref:cedfadc9 | Amount: INR 16925.49,Shopping
+iPlanet Apple reseller | Ref:edc33a03 | Amount: INR 60809.22,Shopping
+Imagine store AppleCare | Ref:c16b1610 | Amount: INR 74778.02,Shopping
+Poorvika iPhone trade-in | Ref:abcac3d1 | Amount: INR 2499.67,Shopping
+Samsung shop online | Ref:ecee27be | Amount: INR 80162.32,Shopping
+OnePlus store accessories | Ref:8fded6e1 | Amount: INR 52378.61,Shopping
+Boat lifestyle earbuds | Ref:320f9f56 | Amount: INR 53900.25,Shopping
+Noise smartwatch order | Ref:7c0cb411 | Amount: INR 86121.65,Shopping
+Fire-Boltt fitness band | Ref:4c3df3da | Amount: INR 18763.21,Shopping
+Lenovo laptop online | Ref:cac9bb4d | Amount: INR 36268.45,Shopping
+HP world store debit | Ref:7aca36d6 | Amount: INR 8604.04,Shopping
+Dell online outlet order | Ref:3ebcc61a | Amount: INR 88900.49,Shopping
+Asus ROG accessories | Ref:6b676b4b | Amount: INR 17719.73,Shopping
+LG OLED TV installment | Ref:7054ce5e | Amount: INR 13841.22,Shopping
+Sony Bravia dealer debit | Ref:0dfaddfe | Amount: INR 27623.75,Shopping
+Panasonic AC installation | Ref:2ce1bf60 | Amount: INR 49218.14,Shopping
+Voltas AC AMC renewal | Ref:12a7fcab | Amount: INR 25786.61,Shopping
+Blue Star water purifier | Ref:c37ee8b2 | Amount: INR 53532.28,Shopping
+Kent RO filter replacement | Ref:4aabcf9c | Amount: INR 82589.32,Shopping
+Eureka Forbes vacuum | Ref:bd37fd94 | Amount: INR 60306.27,Shopping
+Philips air fryer order | Ref:7bcbeae9 | Amount: INR 30035.98,Shopping
+Prestige cooker combo | Ref:a5e8a86a | Amount: INR 37443.39,Shopping
+Pigeon kitchenware UPI | Ref:d3ea9e77 | Amount: INR 56334.84,Shopping
+Milton bottle bulk school | Ref:ffa3a7bc | Amount: INR 94774.17,Shopping
+Tupperware party order | Ref:3c9d2fa7 | Amount: INR 51717.71,Shopping
+IKEA Hyderabad furniture | Ref:abeb5f4f | Amount: INR 36420.12,Shopping
+HomeCentre decor purchase | Ref:d62f7fd1 | Amount: INR 75076.56,Shopping
+Urban Ladder sofa EMI | Ref:2fadc88d | Amount: INR 70316.79,Shopping
+Pepperfry wardrobe order | Ref:6f3b9a19 | Amount: INR 63573.47,Shopping
+Wakefit mattress online | Ref:a0ecbecc | Amount: INR 79302.24,Shopping
+SleepyCat mattress debit | Ref:ff79897c | Amount: INR 32545.04,Shopping
+Flo mattress trial debit | Ref:d017c8ac | Amount: INR 71464.26,Shopping
+Nilkamal plastic chairs | Ref:21ffac27 | Amount: INR 9630.27,Shopping
+Supreme furniture plastic | Ref:20c2b8a8 | Amount: INR 4797.05,Shopping
+Godrej Interio showroom | Ref:f9e4c614 | Amount: INR 44649.89,Shopping
+Durian sofa leather order | Ref:34d57abf | Amount: INR 44433.79,Shopping
+Hometown dining set | Ref:6a0cf32c | Amount: INR 31531.07,Shopping
+HomeTown modular kitchen | Ref:94a53de1 | Amount: INR 26801.31,Shopping
+Livspace design fee advance | Ref:6ea8bd5a | Amount: INR 62801.58,Shopping
+Bonito Designs interior | Ref:ab78b201 | Amount: INR 30576.37,Shopping
+Asian Paints dealer debit | Ref:ba9ef9d2 | Amount: INR 34115.46,Shopping
+Berger Paints contractor bill | Ref:a7ff92bd | Amount: INR 20086.66,Shopping
+Nerolac emulsion bulk | Ref:9fa7ae93 | Amount: INR 13051.12,Shopping
+Dulux trade paint order | Ref:631af4dd | Amount: INR 93866.12,Shopping
+Havells fan and lights | Ref:3e8a9a9e | Amount: INR 63137.39,Shopping
+Orient Electric cooler | Ref:d453a0df | Amount: INR 13531.07,Shopping
+Bajaj Electricals iron | Ref:96d47a14 | Amount: INR 34987.13,Shopping
+Usha sewing machine order | Ref:bbe00d1e | Amount: INR 14242.09,Shopping
+Morphy Richards mixer | Ref:f00a50cb | Amount: INR 50643.15,Shopping
+Butterfly mixer grinder | Ref:8228febf | Amount: INR 30942.8,Shopping
+Sujata mixer service parts | Ref:3d2c8e61 | Amount: INR 22875.87,Shopping
+Wonderchef cookware set | Ref:6029a8bf | Amount: INR 55536.16,Shopping
+Meyer cookware stainless | Ref:9a8a17a8 | Amount: INR 22653.0,Shopping
+Vinod cookware induction | Ref:ffb72c8e | Amount: INR 59914.47,Shopping
+Hawkins pressure cooker | Ref:8a4effd2 | Amount: INR 56427.13,Shopping
+Prestige induction cooktop | Ref:0e9aec51 | Amount: INR 16755.16,Shopping
+Pigeon induction cooktop | Ref:75c9f217 | Amount: INR 43769.85,Shopping
+Borosil glassware set | Ref:c0fc7643 | Amount: INR 52192.22,Shopping
+Treo tiffin stackable | Ref:fc4521aa | Amount: INR 3691.64,Shopping
+Milton tiffin combo | Ref:ef502afc | Amount: INR 2281.7,Shopping
+Cello furniture plastic | Ref:3fe60dea | Amount: INR 17776.16,Shopping
+Nilkamal chair bulk office | Ref:eafdbaaa | Amount: INR 22710.22,Shopping
+Supreme chair dealer | Ref:10a8cab2 | Amount: INR 87843.2,Shopping
+Amazon basics HDMI cable | Ref:d1df99b3 | Amount: INR 32587.03,Shopping
+Amazon basics backpack | Ref:ab2db4e5 | Amount: INR 87425.3,Shopping
+Flipkart smartbuy cable | Ref:edaff3a5 | Amount: INR 2549.95,Shopping
+JioMart electronics accessories | Ref:acf95539 | Amount: INR 92712.24,Shopping
+Reliance Smart Bazaar bulk | Ref:da8b0e1d | Amount: INR 94936.24,Shopping
+DMart monthly stock-up | Ref:2aba7ba5 | Amount: INR 71852.77,Shopping
+Big Bazaar closing sale legacy | Ref:bffd37e9 | Amount: INR 43265.39,Shopping
+Spencer's home essentials | Ref:cdbe7a4f | Amount: INR 84518.48,Shopping
+More Retail home care | Ref:efeafdbe | Amount: INR 31426.99,Shopping
+Metro wholesale cleaning supplies | Ref:bb27887e | Amount: INR 35532.75,Shopping
+IKEA kids room furniture | Ref:a0df3eef | Amount: INR 95331.89,Shopping
+FirstCry baby gear order | Ref:5e6a6c07 | Amount: INR 95750.02,Shopping
+Hopscotch kids clothing | Ref:f14fdef3 | Amount: INR 50501.51,Shopping
+Mothercare stroller order | Ref:49ef98dd | Amount: INR 44785.2,Shopping
+Decathlon sports gear | Ref:f24720dc | Amount: INR 34904.12,Shopping
+Wildcraft rucksack order | Ref:85e527bd | Amount: INR 59975.99,Shopping
+Skybags luggage online | Ref:6cba793b | Amount: INR 84454.08,Shopping
+American Tourister suitcase | Ref:f6abd21b | Amount: INR 23355.06,Shopping
+Samsonite cabin bag | Ref:26e6b5f9 | Amount: INR 63851.85,Shopping
+VIP bags school bag | Ref:df6bcf14 | Amount: INR 23235.24,Shopping
+Safari bags trolley | Ref:3ca6adfe | Amount: INR 25157.98,Shopping
+Puma outlet sneakers | Ref:d3f3be4d | Amount: INR 50115.12,Shopping
+Adidas originals store | Ref:88a992e9 | Amount: INR 73207.08,Shopping
+Nike factory outlet debit | Ref:6baf4beb | Amount: INR 73448.8,Shopping
+Reebok crossfit shoes | Ref:cebdff13 | Amount: INR 53749.17,Shopping
+Woodland boots seasonal | Ref:f6b1eb78 | Amount: INR 59274.16,Shopping
+Bata school shoes bulk | Ref:7affff0f | Amount: INR 84083.03,Shopping
+Liberty shoes formal | Ref:1ae5fdef | Amount: INR 31257.29,Shopping
+Metro shoes wedding | Ref:8768efb7 | Amount: INR 27535.43,Shopping
+Mochi shoes festive | Ref:c9286a35 | Amount: INR 49216.46,Shopping
+Regal shoes leather | Ref:7f54bcfc | Amount: INR 42624.91,Shopping
+Hidesign wallet purchase | Ref:314df989 | Amount: INR 55822.89,Shopping
+Lavie handbags online | Ref:baab2bcf | Amount: INR 74422.06,Shopping
+Caprese bags debit | Ref:46a9f01e | Amount: INR 6486.87,Shopping
+Baggit tote order | Ref:dcc70d83 | Amount: INR 56513.1,Shopping
+Wildcraft wallet combo | Ref:28be5075 | Amount: INR 68144.48,Shopping
+Tanishq jewellery advance | Ref:aa57cbf7 | Amount: INR 11675.54,Shopping
+Malabar Gold purchase | Ref:b77a3af2 | Amount: INR 38569.26,Shopping
+Kalyan Jewellers booking | Ref:21f10caa | Amount: INR 91249.49,Shopping
+PC Jeweller gold coin | Ref:ebb2c5af | Amount: INR 84934.82,Shopping
+Joyalukkas chain purchase | Ref:0aecfa27 | Amount: INR 41244.22,Shopping
+Bhima jewellers necklace | Ref:87c16426 | Amount: INR 65288.11,Shopping
+Reliance Jewels offer | Ref:14f6ab43 | Amount: INR 55664.17,Shopping
+CaratLane online ring | Ref:ebde3fd7 | Amount: INR 83071.19,Shopping
+BlueStone diamond stud | Ref:32e1bedc | Amount: INR 73602.3,Shopping
+Melorra daily wear gold | Ref:fecb75d7 | Amount: INR 2446.2,Shopping
+Giva silver jewellery | Ref:0bfae2ea | Amount: INR 36854.67,Shopping
+Pipa Bella accessories | Ref:0ee21091 | Amount: INR 43539.61,Shopping
+Accessorize London India | Ref:34c5fea7 | Amount: INR 94207.78,Shopping
+Claire's accessories mall | Ref:8219dbf0 | Amount: INR 68030.41,Shopping
+Lifestyle department store | Ref:6dc67c78 | Amount: INR 6469.57,Shopping
+Shoppers Stop sale debit | Ref:bbb2e338 | Amount: INR 30151.89,Shopping
+Pantaloons festive shopping | Ref:ee15dee7 | Amount: INR 41672.8,Shopping
+Westside home linen | Ref:ae8bd248 | Amount: INR 10544.6,Shopping
+Marks and Spencer India | Ref:40e843fa | Amount: INR 3379.19,Shopping
+Zara India store debit | Ref:c9c2fc9e | Amount: INR 73332.23,Shopping
+H&M fast fashion purchase | Ref:7ff195ba | Amount: INR 30410.63,Shopping
+Uniqlo India launch day | Ref:eb0c72a3 | Amount: INR 66718.9,Shopping
+Decathlon hiking pants | Ref:fc4df1c9 | Amount: INR 781.55,Shopping
+Wildcraft rain jacket | Ref:efcd2b53 | Amount: INR 32621.65,Shopping
+Columbia trek shoes import | Ref:1efd79b1 | Amount: INR 88133.09,Shopping
+The North Face jacket | Ref:f4d9f3ba | Amount: INR 23458.97,Shopping
+Patagonia fleece rare import | Ref:a34043af | Amount: INR 63498.1,Shopping
+REI gear forwarder fee | Ref:b94b9f85 | Amount: INR 26862.11,Shopping
+AliExpress India customs duty | Ref:962b8bc0 | Amount: INR 10817.89,Shopping
+Shein alternative app order | Ref:aece1bc3 | Amount: INR 83720.25,Shopping
+Meesho reseller stock purchase | Ref:5ae726bf | Amount: INR 82564.95,Shopping
+GlowRoad reseller bulk | Ref:a7d5a8d6 | Amount: INR 28301.21,Shopping
+Shop101 social commerce | Ref:a603fb9c | Amount: INR 4821.19,Shopping
+DealShare grocery bulk | Ref:d5aa39c1 | Amount: INR 68053.87,Shopping
+JioMart partner order | Ref:0d9cedb7 | Amount: INR 80223.35,Shopping
+Flipkart wholesale B2B | Ref:baf1fec1 | Amount: INR 94846.24,Shopping
+Udaan B2B stock purchase | Ref:4cdac1e4 | Amount: INR 90017.22,Shopping
+IndiaMART supplier advance | Ref:6a59cdc4 | Amount: INR 61563.15,Shopping
+Alibaba small lot import fee | Ref:28bae8eb | Amount: INR 44745.57,Shopping
+Customs duty on parcel | Ref:5d82ba98 | Amount: INR 83134.15,Shopping
+Courier COD settlement debit | Ref:0c71c6df | Amount: INR 41353.61,Shopping
+Blue Dart freight charge | Ref:ff7fabfc | Amount: INR 56141.69,Shopping
+Delhivery logistics fee | Ref:da33ddb8 | Amount: INR 74783.04,Shopping
+DTDC courier prepaid | Ref:41d83acd | Amount: INR 22982.38,Shopping
+Professional courier debit | Ref:3c1cabd4 | Amount: INR 42393.91,Shopping
+FedEx import duty payment | Ref:fcc3fea9 | Amount: INR 24725.75,Shopping
+DHL express surcharge | Ref:970d1e41 | Amount: INR 27349.34,Shopping
+Aramex customs clearance | Ref:dffdb3d9 | Amount: INR 35746.38,Shopping
+Amazon global store import | Ref:9dbd08ff | Amount: INR 80084.87,Shopping
+iHerb supplement import duty | Ref:bd4c40f8 | Amount: INR 97628.28,Shopping
+MyProtein import order | Ref:aac1bb65 | Amount: INR 34062.96,Shopping
+Nykaa global beauty import | Ref:3e72e4b9 | Amount: INR 12378.17,Shopping
+Sephora India online | Ref:4a3c0e98 | Amount: INR 87759.36,Shopping
+LookFantastic subscription | Ref:09bd9609 | Amount: INR 72496.51,Shopping
+Cult.fit merch store | Ref:b7f9beb2 | Amount: INR 70753.64,Shopping
+Nike SNKRS India draw loss | Ref:a0c5ba9d | Amount: INR 3400.19,Shopping
+Adidas confirmed app debit | Ref:9b2aee73 | Amount: INR 31263.8,Shopping
+StockX forwarder fee | Ref:4216970d | Amount: INR 35143.42,Shopping
+GOAT sneakers customs | Ref:23e3e5cb | Amount: INR 96699.82,Shopping
+eBay India seller tools | Ref:685b0fdb | Amount: INR 61297.07,Shopping
+Etsy craft supplies import | Ref:361f3c88 | Amount: INR 98057.85,Shopping
+HDFC home loan EMI auto debit | Ref:cd8c470c | Amount: INR 39825.79,EMI
+SBI home loan EMI ECS | Ref:fe39694b | Amount: INR 75424.39,EMI
+ICICI car loan EMI | Ref:15924688 | Amount: INR 97658.6,EMI
+Axis Bank personal loan EMI | Ref:1d3aadc0 | Amount: INR 51829.1,EMI
+Kotak credit card EMI conversion | Ref:c3cac8c9 | Amount: INR 22444.43,EMI
+HDFC credit card EMI plan | Ref:9d58feab | Amount: INR 3339.27,EMI
+ICICI credit card EMI | Ref:0b6b2b8b | Amount: INR 65793.49,EMI
+SBI SimplyCLICK EMI | Ref:bfddc9da | Amount: INR 72694.48,EMI
+American Express EMI charge | Ref:3ecab06f | Amount: INR 80090.01,EMI
+Citibank loan EMI | Ref:d7c1ff7d | Amount: INR 1563.9,EMI
+Standard Chartered loan EMI | Ref:ae376d63 | Amount: INR 11833.65,EMI
+Yes Bank personal loan EMI | Ref:74fffc72 | Amount: INR 45499.77,EMI
+IndusInd two wheeler EMI | Ref:8ffc06f4 | Amount: INR 90479.78,EMI
+Federal Bank gold loan EMI | Ref:2b062a4f | Amount: INR 18844.08,EMI
+South Indian Bank housing EMI | Ref:7ad27c85 | Amount: INR 51705.06,EMI
+Karnataka Bank vehicle EMI | Ref:845ee03b | Amount: INR 64669.18,EMI
+Canara Bank education loan EMI | Ref:ce2aca4c | Amount: INR 55503.46,EMI
+Union Bank of India EMI | Ref:0d2a9e0c | Amount: INR 98409.14,EMI
+Bank of Baroda home loan EMI | Ref:f1f272c3 | Amount: INR 78148.52,EMI
+PNB housing finance EMI | Ref:efde5f4e | Amount: INR 97305.02,EMI
+Indian Bank mortgage EMI | Ref:f2b6ca30 | Amount: INR 91279.89,EMI
+Indian Overseas Bank EMI | Ref:983dc297 | Amount: INR 13292.72,EMI
+UCO Bank loan EMI | Ref:2de7c7ad | Amount: INR 22805.79,EMI
+Central Bank of India EMI | Ref:fe1cec55 | Amount: INR 32293.83,EMI
+IDBI Bank home loan EMI | Ref:fc7ecd6b | Amount: INR 44055.56,EMI
+Bank of Maharashtra EMI | Ref:b01385b7 | Amount: INR 55320.74,EMI
+Jammu and Kashmir Bank EMI | Ref:fae9d465 | Amount: INR 53445.84,EMI
+Punjab and Sind Bank EMI | Ref:9805c21b | Amount: INR 39128.08,EMI
+Tamilnad Mercantile Bank EMI | Ref:5fb4ffb6 | Amount: INR 56978.02,EMI
+DCB Bank personal loan EMI | Ref:fde95d7b | Amount: INR 91273.2,EMI
+RBL Bank credit card EMI | Ref:2faa8a29 | Amount: INR 293.85,EMI
+AU Small Finance Bank EMI | Ref:7eaf7a51 | Amount: INR 32958.38,EMI
+Ujjivan Small Finance Bank EMI | Ref:4edd1fea | Amount: INR 19742.01,EMI
+Equitas EMI on two wheeler | Ref:abe6cb2c | Amount: INR 11038.64,EMI
+ESAF Small Finance Bank EMI | Ref:2b2dbb99 | Amount: INR 91821.09,EMI
+North East Small Finance Bank EMI | Ref:b2c8e48e | Amount: INR 28941.59,EMI
+Jana Small Finance Bank EMI | Ref:a4d3af4e | Amount: INR 22912.68,EMI
+Capital Small Finance Bank EMI | Ref:cf33c209 | Amount: INR 45865.48,EMI
+Shivalik Small Finance Bank EMI | Ref:4ecb35a9 | Amount: INR 14925.13,EMI
+Unity Small Finance Bank EMI | Ref:71bd3dfb | Amount: INR 22848.01,EMI
+Bajaj Finserv consumer EMI | Ref:71ce1644 | Amount: INR 96564.64,EMI
+Bajaj Finance EMI debit | Ref:ad98b008 | Amount: INR 41905.44,EMI
+Tata Capital personal loan EMI | Ref:bdaebf2c | Amount: INR 95940.33,EMI
+L&T Finance two wheeler EMI | Ref:eddbbdd2 | Amount: INR 57081.71,EMI
+Mahindra Finance tractor EMI | Ref:b6ad02b0 | Amount: INR 44303.7,EMI
+Cholamandalam vehicle EMI | Ref:5b9bd6d8 | Amount: INR 12044.43,EMI
+Shriram Finance gold loan EMI | Ref:dcaade49 | Amount: INR 36648.65,EMI
+Muthoot Finance loan EMI | Ref:d8abd6b6 | Amount: INR 63712.39,EMI
+Manappuram gold loan EMI | Ref:cacafaa9 | Amount: INR 61114.92,EMI
+IIFL Finance EMI | Ref:426ed7ed | Amount: INR 49338.33,EMI
+Aditya Birla Housing EMI | Ref:c86ae9ab | Amount: INR 66514.36,EMI
+LIC Housing Finance EMI | Ref:a365c3b2 | Amount: INR 70613.12,EMI
+PNB Housing Finance EMI | Ref:2d2fcefe | Amount: INR 76368.89,EMI
+GIC Housing Finance EMI | Ref:4f52375a | Amount: INR 71847.06,EMI
+HUDCO subsidiary EMI | Ref:b80cbf06 | Amount: INR 88130.36,EMI
+India Shelter housing EMI | Ref:c248539a | Amount: INR 22887.11,EMI
+Aptus Value Housing EMI | Ref:b2ba12cd | Amount: INR 58424.86,EMI
+Home First Finance EMI | Ref:9ca1c79e | Amount: INR 52538.14,EMI
+Aspire Home Finance EMI | Ref:54f49efe | Amount: INR 77981.34,EMI
+Capri Global Housing EMI | Ref:febc3b1c | Amount: INR 45517.75,EMI
+Altico housing loan EMI | Ref:e2a3424e | Amount: INR 28497.26,EMI
+Reliance Home Finance EMI legacy | Ref:37837db2 | Amount: INR 46196.55,EMI
+DHFL EMI assignment NBFC | Ref:49d4592b | Amount: INR 27155.1,EMI
+Indiabulls Housing EMI | Ref:ffaa22fd | Amount: INR 69874.15,EMI
+JM Financial home loan EMI | Ref:a1ac3ba1 | Amount: INR 62985.85,EMI
+Motilal Oswal Home Finance EMI | Ref:72dd37fc | Amount: INR 75537.19,EMI
+Piramal Capital housing EMI | Ref:1a232d4a | Amount: INR 24659.41,EMI
+Fullerton India personal EMI | Ref:2a9111cc | Amount: INR 68417.06,EMI
+Hero FinCorp bike EMI | Ref:dcfa5e5e | Amount: INR 66944.62,EMI
+TVS Credit EMI | Ref:69fd85ce | Amount: INR 96812.03,EMI
+HDB Financial Services EMI | Ref:15f820e7 | Amount: INR 87062.16,EMI
+IDFC FIRST Bank loan EMI | Ref:d27acdd8 | Amount: INR 90210.65,EMI
+Bandhan Bank housing EMI | Ref:d2bd80e0 | Amount: INR 39842.36,EMI
+CSB Bank gold loan EMI | Ref:e5ebcdb9 | Amount: INR 38147.45,EMI
+Karur Vysya Bank EMI | Ref:d244dc4f | Amount: INR 41711.75,EMI
+City Union Bank EMI | Ref:6af21faf | Amount: INR 39505.35,EMI
+Tamilnad Mercantile housing EMI | Ref:3d3fbeaf | Amount: INR 64966.35,EMI
+Credit card EMI on electronics | Ref:185da392 | Amount: INR 525.95,EMI
+No cost EMI Amazon order | Ref:4ca4dd7e | Amount: INR 18746.94,EMI
+No cost EMI Flipkart order | Ref:bc687dc4 | Amount: INR 31738.98,EMI
+Debit EMI on POS purchase | Ref:ec8253da | Amount: INR 92643.8,EMI
+BNPL postpaid bill EMI | Ref:e9b70137 | Amount: INR 35212.18,EMI
+LazyPay EMI settlement | Ref:a6cea597 | Amount: INR 84183.56,EMI
+Simpl pay later EMI | Ref:6af9db63 | Amount: INR 34806.74,EMI
+ZestMoney EMI debit | Ref:fe6501cf | Amount: INR 71751.7,EMI
+EarlySalary loan EMI | Ref:8316dce9 | Amount: INR 6844.13,EMI
+KreditBee EMI repayment | Ref:1e8da8aa | Amount: INR 48736.61,EMI
+MoneyTap line EMI | Ref:2bd6fd7e | Amount: INR 20494.47,EMI
+Navi loan EMI | Ref:9dfefe3b | Amount: INR 3215.16,EMI
+Paytm Postpaid EMI | Ref:cdced602 | Amount: INR 36116.31,EMI
+Amazon Pay Later EMI | Ref:66b0cf33 | Amount: INR 63503.17,EMI
+Flipkart Pay Later EMI | Ref:7a30ddaf | Amount: INR 23310.18,EMI
+PhonePe postpaid EMI | Ref:cbdeb39d | Amount: INR 92497.66,EMI
+Cred cash EMI | Ref:51cebe0c | Amount: INR 38981.35,EMI
+Slice borrow EMI | Ref:3316b8dd | Amount: INR 93852.17,EMI
+Uni card EMI | Ref:ea87eb28 | Amount: INR 35807.23,EMI
+OneCard EMI conversion | Ref:d4f060a3 | Amount: INR 84168.45,EMI
+Fi Salary Program EMI | Ref:eb3eca3f | Amount: INR 70960.33,EMI
+Jupiter loan EMI | Ref:eb6ccb2e | Amount: INR 24696.99,EMI
+NiyoX loan EMI | Ref:ce023c8f | Amount: INR 71044.92,EMI
+Freo EMI | Ref:eacbbff9 | Amount: INR 39269.73,EMI
+Stashfin EMI | Ref:24facae1 | Amount: INR 93139.33,EMI
+SmartCoin EMI | Ref:0af3b02b | Amount: INR 82986.34,EMI
+RupeeRedee EMI | Ref:0d0aaae9 | Amount: INR 255.61,EMI
+CashBean EMI | Ref:e7f3eec3 | Amount: INR 24484.01,EMI
+mPokket student EMI | Ref:f86eaefc | Amount: INR 92780.8,EMI
+Propelld education EMI | Ref:4fcfd6b0 | Amount: INR 80518.83,EMI
+Avanse education loan EMI | Ref:8c639304 | Amount: INR 52520.45,EMI
+Credila education EMI | Ref:d17ea386 | Amount: INR 53197.08,EMI
+Auxilo education EMI | Ref:6175d2c4 | Amount: INR 98284.4,EMI
+HDFC Credila EMI | Ref:7a3e61cf | Amount: INR 26035.38,EMI
+Axis education loan EMI | Ref:c8965fce | Amount: INR 42009.01,EMI
+Prodigy Finance EMI INR | Ref:29f407da | Amount: INR 50711.73,EMI
+Leap finance study EMI | Ref:6abc3daf | Amount: INR 91518.27,EMI
+MPOWER financing EMI | Ref:d23ace5f | Amount: INR 26412.57,EMI
+Leap Scholar EMI | Ref:9ea3e0dd | Amount: INR 23411.38,EMI
+Education loan moratorium ended EMI | Ref:0cbd70b6 | Amount: INR 34048.39,EMI
+Top-up loan EMI after prepay | Ref:ddd6eaee | Amount: INR 68024.63,EMI
+Balance transfer EMI card | Ref:33e37acc | Amount: INR 83395.65,EMI
+Loan against property EMI | Ref:b0d60f2d | Amount: INR 75550.72,EMI
+Loan against FD EMI | Ref:4f8bdb04 | Amount: INR 10692.01,EMI
+Gold loan bullet repayment EMI | Ref:3898fd49 | Amount: INR 60297.08,EMI
+Overdraft EMI conversion | Ref:ae9bb9be | Amount: INR 28216.58,EMI
+OD limit EMI auto debit | Ref:43acaf61 | Amount: INR 94720.68,EMI
+Cash credit EMI MSME | Ref:36abfa26 | Amount: INR 67498.02,EMI
+Working capital EMI | Ref:0f7036ca | Amount: INR 91480.61,EMI
+Machinery loan EMI | Ref:aff938ed | Amount: INR 14943.82,EMI
+CGTMSE backed loan EMI | Ref:ddc05e12 | Amount: INR 1593.73,EMI
+PMEGP loan EMI | Ref:267c19ee | Amount: INR 74461.32,EMI
+Mudra loan EMI Shishu | Ref:da6a1cdb | Amount: INR 24907.97,EMI
+Mudra loan EMI Kishor | Ref:1f86d9f7 | Amount: INR 84022.69,EMI
+Mudra loan EMI Tarun | Ref:d540eba6 | Amount: INR 178.61,EMI
+Stand-Up India loan EMI | Ref:d36ec90e | Amount: INR 38096.25,EMI
+Startup India seed loan EMI | Ref:75811145 | Amount: INR 18866.13,EMI
+Venture debt EMI rare | Ref:cc3e5afd | Amount: INR 80500.24,EMI
+NBFC LAP EMI | Ref:1fe39593 | Amount: INR 39586.18,EMI
+Co-lending bank NBFC EMI | Ref:650f9ac5 | Amount: INR 9999.97,EMI
+Securitisation pool EMI notice | Ref:3f19bb8f | Amount: INR 84590.18,EMI
+NACH bounce re-present EMI | Ref:8fcd633f | Amount: INR 6529.4,EMI
+ECS mandate home loan EMI | Ref:fdf09460 | Amount: INR 16516.35,EMI
+SI standing instruction EMI | Ref:3dab18fa | Amount: INR 44830.87,EMI
+Auto debit bounce charge plus EMI | Ref:bae726c8 | Amount: INR 82429.84,EMI
+Part prepayment EMI reschedule | Ref:1e07ad8d | Amount: INR 94668.62,EMI
+EMI holiday month catch-up | Ref:fe8fc35b | Amount: INR 67870.14,EMI
+Moratorium interest capitalisation EMI | Ref:8dd46f1b | Amount: INR 15992.07,EMI
+Floating rate reset higher EMI | Ref:3ea32c66 | Amount: INR 4645.89,EMI
+Repo linked loan EMI revision | Ref:c8cc37a9 | Amount: INR 19437.78,EMI
+MCLR linked EMI change | Ref:c9ab0dc5 | Amount: INR 41014.91,EMI
+Base rate legacy EMI | Ref:da6ecde4 | Amount: INR 47147.13,EMI
+BPLR legacy EMI | Ref:ee4e9351 | Amount: INR 60903.55,EMI
+Teaser rate EMI step-up | Ref:3edbcfcc | Amount: INR 6725.78,EMI
+Balloon EMI final year | Ref:da0bbebb | Amount: INR 18070.95,EMI
+Bullet repayment structured EMI | Ref:efc0cff0 | Amount: INR 27374.12,EMI
+Hybrid ARM EMI phase 2 | Ref:dd9afba8 | Amount: INR 36232.81,EMI
+Zerodha equity buy order | Ref:6faec00d | Amount: INR 8519.47,Investment
+Groww mutual fund SIP | Ref:47fabe30 | Amount: INR 90563.14,Investment
+Upstox F&O margin top-up | Ref:beca3f99 | Amount: INR 66433.42,Investment
+Angel One brokerage charges | Ref:afd58e95 | Amount: INR 11845.31,Investment
+5paisa discount broker debit | Ref:a046ceeb | Amount: INR 48809.86,Investment
+Paytm Money MF purchase | Ref:03f6db8a | Amount: INR 90448.78,Investment
+ET Money SIP debit | Ref:fcabf11d | Amount: INR 11795.82,Investment
+Kuvera direct plan SIP | Ref:d5d7ede2 | Amount: INR 85447.63,Investment
+INDmoney advisory fee | Ref:c18dfe2b | Amount: INR 7882.08,Investment
+Smallcase rebalance debit | Ref:fd1c0ce6 | Amount: INR 86246.07,Investment
+TickerTape premium subscription | Ref:83badb4d | Amount: INR 11385.22,Investment
+Sensibull options toolkit | Ref:becc0f79 | Amount: INR 20386.94,Investment
+Streak algo trading fee | Ref:1efde0d6 | Amount: INR 98466.33,Investment
+TradingView India plan | Ref:f30fc8dd | Amount: INR 9837.37,Investment
+NSE co-location not retail joke | Ref:ebfeb2ce | Amount: INR 49276.21,Investment
+BSE star MF purchase | Ref:0cdfd7ec | Amount: INR 49389.63,Investment
+CAMS KFin fee | Ref:ab771bc6 | Amount: INR 42221.91,Investment
+MFU CAN purchase | Ref:630bcb49 | Amount: INR 22165.08,Investment
+Nippon India MF SIP | Ref:b5ffba6e | Amount: INR 29109.38,Investment
+SBI MF regular SIP | Ref:51dcb3ac | Amount: INR 6480.83,Investment
+HDFC MF direct SIP | Ref:33ac69eb | Amount: INR 74036.96,Investment
+ICICI Prudential MF SIP | Ref:4e8ce7b5 | Amount: INR 51933.9,Investment
+Axis MF SIP | Ref:e7f88bd6 | Amount: INR 47940.56,Investment
+Kotak MF SIP | Ref:a26d5eea | Amount: INR 7189.31,Investment
+Franklin Templeton MF SIP | Ref:a1a7fcd0 | Amount: INR 33972.27,Investment
+DSP MF SIP | Ref:ceedd3a0 | Amount: INR 9407.28,Investment
+Mirae Asset MF SIP | Ref:cc3d4ddb | Amount: INR 62404.97,Investment
+Parag Parikh Flexi Cap SIP | Ref:00dceaaf | Amount: INR 59705.68,Investment
+Quant MF lumpsum | Ref:699cf4ad | Amount: INR 13244.94,Investment
+Edelweiss MF SIP | Ref:91e8ee9e | Amount: INR 32071.58,Investment
+ITI MF SIP | Ref:8a2d1ddf | Amount: INR 84232.77,Investment
+LIC MF SIP | Ref:4af3bf54 | Amount: INR 95492.32,Investment
+Tata MF SIP | Ref:a4dbdefa | Amount: INR 2020.05,Investment
+UTI MF SIP | Ref:2b1dfec8 | Amount: INR 75648.59,Investment
+Aditya Birla Sun Life SIP | Ref:00764b43 | Amount: INR 37177.67,Investment
+HSBC MF SIP | Ref:bba8d38d | Amount: INR 55530.17,Investment
+PGIM India MF SIP | Ref:5609cbb5 | Amount: INR 79275.46,Investment
+Baroda BNP Paribas SIP | Ref:cbdefa90 | Amount: INR 96411.1,Investment
+Bank of India MF SIP | Ref:8ff4da73 | Amount: INR 72503.16,Investment
+Canara Robeco SIP | Ref:4ae585aa | Amount: INR 19125.41,Investment
+Invesco India MF SIP | Ref:92e90ca8 | Amount: INR 11336.09,Investment
+Motilal Oswal Midcap SIP | Ref:eb4cece9 | Amount: INR 19696.26,Investment
+Navi MF SIP | Ref:efc9e7ec | Amount: INR 17910.05,Investment
+Groww gold lease not | Ref:1aa2aceb | Amount: INR 85061.34,Investment
+Augmont digital gold buy | Ref:df82b9cf | Amount: INR 27640.77,Investment
+SafeGold purchase | Ref:8c1ab2bb | Amount: INR 71982.49,Investment
+MMTC-PAMP gold coin | Ref:a16bc82a | Amount: INR 37457.75,Investment
+Jewelery gold ETF not | Ref:e19d14fe | Amount: INR 85004.16,Investment
+Sovereign Gold Bond purchase | Ref:8bb3e0a1 | Amount: INR 59377.63,Investment
+RBI Retail Direct G-Sec buy | Ref:99aaa790 | Amount: INR 87004.85,Investment
+NSC purchase post office | Ref:a9da05b8 | Amount: INR 45631.11,Investment
+Kisan Vikas Patra deposit | Ref:027b79d7 | Amount: INR 14201.67,Investment
+PPF annual contribution | Ref:5f7a96db | Amount: INR 21697.1,Investment
+Sukanya Samriddhi deposit | Ref:2c161e95 | Amount: INR 89377.95,Investment
+Senior Citizens Savings Scheme | Ref:1cbdb3ec | Amount: INR 69019.1,Investment
+Post office MIS deposit | Ref:e21c9f9c | Amount: INR 77052.43,Investment
+Corporate bond purchase retail | Ref:483ec2c0 | Amount: INR 5193.36,Investment
+Edelweiss NCD subscription | Ref:fd54cd7d | Amount: INR 38688.26,Investment
+Shriram Finance NCD | Ref:f6199ad0 | Amount: INR 18216.91,Investment
+Muthoottu NCD | Ref:c4ec42a1 | Amount: INR 45015.93,Investment
+JM Financial NCD | Ref:bedf4fda | Amount: INR 65987.15,Investment
+IndiaBonds platform fee | Ref:c96af744 | Amount: INR 26131.49,Investment
+GoldenPi charges | Ref:31c3de08 | Amount: INR 33920.5,Investment
+TheFixedIncome platform fee | Ref:cddd54d0 | Amount: INR 82120.41,Investment
+Wint Wealth charges | Ref:b8b2d1f9 | Amount: INR 27280.37,Investment
+Grip invest fractional lease | Ref:5d74329d | Amount: INR 27117.29,Investment
+Jiraaf invoice discounting | Ref:d3d7818c | Amount: INR 23637.27,Investment
+TradeCred supply chain invest | Ref:ab480198 | Amount: INR 39799.55,Investment
+Liquiloans P2P lending debit | Ref:d5c4cff0 | Amount: INR 27356.94,Investment
+Faircent P2P lend | Ref:9ab6dafd | Amount: INR 35839.08,Investment
+LenDenClub investment | Ref:ebeaf45e | Amount: INR 73542.64,Investment
+i2iFunding bid | Ref:6dcac165 | Amount: INR 17878.44,Investment
+PropShare fractional realty | Ref:eb7d52f9 | Amount: INR 87657.47,Investment
+Strata prop-tech invest | Ref:1dfadde8 | Amount: INR 60942.19,Investment
+hBits commercial fractional | Ref:3ad5496d | Amount: INR 72427.08,Investment
+RealX tokenized deposit fee | Ref:f7f0eee8 | Amount: INR 58240.7,Investment
+CoinDCX crypto buy | Ref:0eac70b2 | Amount: INR 45799.77,Investment
+WazirX crypto buy legacy | Ref:f3c155f5 | Amount: INR 63383.86,Investment
+ZebPay crypto buy | Ref:aa58cb99 | Amount: INR 35651.52,Investment
+Unocoin BTC buy | Ref:d6c58ab4 | Amount: INR 10138.82,Investment
+Bitbns order fee | Ref:80bd9a9d | Amount: INR 38032.23,Investment
+Vauld not | Ref:9fbdde4b | Amount: INR 25527.89,Investment
+Binance P2P INR transfer fee | Ref:e0e92de1 | Amount: INR 7243.92,Investment
+US stocks INDmoney deposit | Ref:bd5256bd | Amount: INR 3919.88,Investment
+Vested US stocks transfer | Ref:e5a7a2b9 | Amount: INR 71810.44,Investment
+Winvesta USD funding | Ref:017a2aa2 | Amount: INR 93356.23,Investment
+Stockal US stocks | Ref:88fff85a | Amount: INR 88178.73,Investment
+DriveWealth IBKR funding | Ref:7e6a23fa | Amount: INR 6074.9,Investment
+Angel One US stocks beta | Ref:139f8b2e | Amount: INR 34200.77,Investment
+NSE IPO application UPI block | Ref:4a9ca2f1 | Amount: INR 56146.18,Investment
+BSE SME IPO application | Ref:21ffc462 | Amount: INR 68972.43,Investment
+Mainboard IPO mandate | Ref:bbeabaef | Amount: INR 77909.27,Investment
+Rights issue application debit | Ref:7ab5a356 | Amount: INR 45017.55,Investment
+Buyback tender fee | Ref:dbfe6e5d | Amount: INR 77756.93,Investment
+OFS order placement | Ref:e40befd5 | Amount: INR 83413.75,Investment
+NCD subscription broker | Ref:0eacad6a | Amount: INR 70848.25,Investment
+FPO application debit | Ref:39f6180b | Amount: INR 62355.61,Investment
+QIP not retail | Ref:fb75c6f9 | Amount: INR 10596.23,Investment
+ESOP exercise cashless fee | Ref:a3a9de8f | Amount: INR 51610.71,Investment
+ESOP exercise cashful debit | Ref:cbfb58d3 | Amount: INR 62627.71,Investment
+RSU vesting tax debit | Ref:fbcc65f5 | Amount: INR 1869.25,Investment
+Employee stock purchase plan | Ref:6d1bea67 | Amount: INR 85872.6,Investment
+Company NPS contribution employee | Ref:4dae8b6f | Amount: INR 52615.19,Investment
+NPS Tier-II contribution | Ref:72bc0fd3 | Amount: INR 34749.68,Investment
+NPS Tier-I additional contrib | Ref:febc324f | Amount: INR 33910.69,Investment
+Atal Pension Yojana debit | Ref:3df8165e | Amount: INR 45939.06,Investment
+EPF voluntary contribution | Ref:3dd960f5 | Amount: INR 52229.75,Investment
+VPF extra provident fund | Ref:84cebeb2 | Amount: INR 35625.88,Investment
+Superannuation fund debit | Ref:fe49d1a2 | Amount: INR 60927.88,Investment
+Gratuity fund not | Ref:586b8fd0 | Amount: INR 24778.7,Investment
+ULIP premium ICICI Prudential | Ref:ab3e41ea | Amount: INR 8385.87,Investment
+ULIP premium HDFC Life | Ref:a7e4604e | Amount: INR 48923.81,Investment
+ULIP premium Max Life | Ref:4036be70 | Amount: INR 70705.64,Investment
+ULIP premium Bajaj Allianz | Ref:9f311a4b | Amount: INR 92069.16,Investment
+Term insurance renewal SBI Life | Ref:3ed60a31 | Amount: INR 55861.38,Investment
+Health insurance renewal Star Health | Ref:fece744b | Amount: INR 92288.1,Investment
+Motor insurance renewal digit | Ref:eadafdfa | Amount: INR 51722.07,Investment
+Travel insurance for visa | Ref:47f6c79a | Amount: INR 67842.26,Investment
+Home insurance bundle | Ref:ade0eddf | Amount: INR 10214.2,Investment
+Cyber insurance personal | Ref:bba44dd0 | Amount: INR 35923.42,Investment
+Gold ETF purchase NSE | Ref:2ddeb4bc | Amount: INR 92523.32,Investment
+Silver ETF purchase | Ref:bede2c29 | Amount: INR 30236.74,Investment
+REIT units purchase Embassy | Ref:0dbf6d90 | Amount: INR 72633.16,Investment
+REIT units Mindspace | Ref:9cf792fe | Amount: INR 3608.67,Investment
+InvIT units purchase IndInfravit | Ref:98e0cb44 | Amount: INR 76744.12,Investment
+InvIT IRB InvIT toll | Ref:ea7efafc | Amount: INR 54252.47,Investment
+Portfolio management service fee | Ref:ad19a45c | Amount: INR 66574.42,Investment
+AIF category I commitment | Ref:ec2f52ad | Amount: INR 53755.03,Investment
+AIF category II drawdown | Ref:a5e4d04a | Amount: INR 58739.4,Investment
+Angel syndicate SPV contribution | Ref:92d75f06 | Amount: INR 17753.62,Investment
+Venture fund LP commitment INR | Ref:c19c9731 | Amount: INR 22803.87,Investment
+Pre-IPO unlisted shares deal | Ref:01ef9b1c | Amount: INR 28880.6,Investment
+Unlistedkart brokerage | Ref:8b0a01ff | Amount: INR 23021.31,Investment
+TYKE invest platform fee | Ref:194b3800 | Amount: INR 643.0,Investment
+Altius invest charges | Ref:3fceb076 | Amount: INR 9470.98,Investment
+BondsIndia brokerage | Ref:c50194c4 | Amount: INR 80537.66,Investment
+Yubi invest fee | Ref:fd65e8bb | Amount: INR 29821.09,Investment
+Jiraaf processing fee | Ref:3ffdfa0f | Amount: INR 42836.31,Investment
+Grip invest processing fee | Ref:382e647d | Amount: INR 61001.96,Investment
+Smallcase subscription annual | Ref:faf83ec5 | Amount: INR 72314.4,Investment
+TickerTape pro plus | Ref:d6f14262 | Amount: INR 212.4,Investment
+Sensibull pro plan | Ref:27ccfdfa | Amount: INR 66340.06,Investment
+TradingQ&A courses fee | Ref:98ffee1a | Amount: INR 40996.68,Investment
+Varsity certificate fee joke | Ref:dded0bda | Amount: INR 83480.73,Investment
+NISM certification exam fee | Ref:c7dfc8d4 | Amount: INR 85452.35,Investment
+CFA USD exam INR conversion | Ref:3a4cf31a | Amount: INR 14196.59,Investment
+FRM exam fee INR | Ref:5ee18dde | Amount: INR 61199.95,Investment
+CA course fee debit | Ref:1edfcfdc | Amount: INR 21709.59,Investment
+CS executive fee | Ref:fae5a732 | Amount: INR 48327.36,Investment
+CMA foundation fee | Ref:e63c3bd3 | Amount: INR 52783.26,Investment
+MBA application fee IIM | Ref:e4db8dc5 | Amount: INR 10401.42,Investment
+GRE exam fee INR | Ref:d7bbfda1 | Amount: INR 39402.96,Investment
+TOEFL fee INR | Ref:c253dd71 | Amount: INR 7284.22,Investment
+IELTS fee INR | Ref:eb44e9c4 | Amount: INR 41356.81,Investment
+Duolingo English test fee | Ref:bfdf23b7 | Amount: INR 88189.67,Investment
+Coursera subscription INR | Ref:25b8435e | Amount: INR 25065.8,Investment
+Udemy course bulk purchase | Ref:ecaf70bb | Amount: INR 43812.46,Investment
+LinkedIn Learning INR | Ref:8dc87fed | Amount: INR 48494.84,Investment
+Scaler academy EMI education | Ref:c25b628c | Amount: INR 55664.13,Investment
+Newton School ISA not | Ref:073b8a91 | Amount: INR 77066.74,Investment
+UpGrad course fee | Ref:6b0716e6 | Amount: INR 835.28,Investment
+Great Learning program fee | Ref:03a2b4ce | Amount: INR 75481.67,Investment
+Simplilearn bootcamp fee | Ref:b7f3c70f | Amount: INR 3620.71,Investment
+Udacity nanodegree fee | Ref:3f158a31 | Amount: INR 45038.4,Investment
+Pluralsight renewal | Ref:074e35ba | Amount: INR 15252.12,Investment
+GitHub Copilot INR | Ref:4cb0d5e1 | Amount: INR 73733.03,Investment
+OpenAI API billing INR card | Ref:e635b51a | Amount: INR 47187.39,Investment
+AWS certification voucher | Ref:8aa73384 | Amount: INR 42805.85,Investment
+Azure exam fee | Ref:3e4e54cf | Amount: INR 47795.92,Investment
+GCP skill boost | Ref:c5930d2f | Amount: INR 97844.87,Investment
+DigitalOcean droplet INR | Ref:a79ac489 | Amount: INR 20655.46,Investment
+Render.com hobby plan | Ref:dceba1c4 | Amount: INR 14901.8,Investment
+Vercel pro plan INR | Ref:a5a9e364 | Amount: INR 73983.66,Investment
+Notion team plan INR | Ref:60aceeef | Amount: INR 83458.43,Investment
+Slack paid plan INR | Ref:3f0bf118 | Amount: INR 54406.04,Investment
+Zoom webinar license | Ref:488dfa17 | Amount: INR 5388.55,Investment
+Google Workspace renewal | Ref:f04f6f6d | Amount: INR 10793.05,Investment
+Microsoft 365 family renewal | Ref:d9a6a5bd | Amount: INR 73998.93,Investment
+Apple iCloud+ India | Ref:85babe27 | Amount: INR 71393.76,Investment
+Dropbox plus renewal | Ref:2cb7cdfa | Amount: INR 63705.57,Investment
+Adobe Creative Cloud India | Ref:5d10af8a | Amount: INR 33720.45,Investment
+Canva Pro team India | Ref:416becef | Amount: INR 27732.63,Investment
+Figma professional INR | Ref:90f1ea06 | Amount: INR 9686.14,Investment
+Miro team plan INR | Ref:f43b7d7e | Amount: INR 35678.82,Investment
+Loom business INR | Ref:ea641295 | Amount: INR 7754.0,Investment
+Calendly pro INR | Ref:c825db6e | Amount: INR 80674.74,Investment
+Grammarly premium INR | Ref:fcd6f390 | Amount: INR 20313.13,Investment
+Surfshark VPN INR | Ref:2b22dc95 | Amount: INR 97864.79,Investment
+NordVPN INR | Ref:3fa0435c | Amount: INR 33179.81,Investment
+ExpressVPN INR | Ref:fcaae7fa | Amount: INR 75183.25,Investment
+1Password family INR | Ref:5f28fbc5 | Amount: INR 88468.02,Investment
+Bitwarden premium INR | Ref:abbc9834 | Amount: INR 44416.14,Investment
+LastPass premium INR | Ref:ec960e2a | Amount: INR 34194.28,Investment
+Password manager not invest joke | Ref:3d49eebf | Amount: INR 34568.1,Investment
