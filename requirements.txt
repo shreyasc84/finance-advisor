@@ -8,3 +8,9 @@ xgboost
 jupyter
 notebook
 ipykernel
+streamlit
+pdfplumber
+plotly
+python-dotenv
+langchain
+langchain-groq
