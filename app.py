@@ -11,6 +11,27 @@ import plotly.express as px
 import streamlit as st
 from dotenv import load_dotenv
 
+from parsers.bank_parsers import parse_pdf_transactions as _parse_bank_pdf
+from pdf_export import build_summary_pdf
+from privacy_utils import (
+    PRIVACY_SIDEBAR_NOTE,
+    build_advisor_context,
+    redact_narration,
+    uploads_fingerprint,
+)
+from ui_components import (
+    NAV_OPTIONS,
+    inject_styles,
+    plotly_theme,
+    render_landing,
+    render_main_header,
+    render_risk_block,
+    render_pdf_download_button,
+    render_stat_row,
+    section_heading,
+    spending_pie_chart,
+)
+
 try:
     from langchain_groq import ChatGroq
     from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
@@ -21,8 +42,9 @@ except Exception:  # pragma: no cover
     ChatPromptTemplate = MessagesPlaceholder = None
 
 
-st.set_page_config(page_title="AI Personal Finance Advisor", layout="wide")
+st.set_page_config(page_title="FinGuide", layout="wide", initial_sidebar_state="expanded")
 load_dotenv()
+
 
 MODELS_DIR = "models"
 CLASSIFIER_PATH = os.path.join(MODELS_DIR, "transaction_classifier.pkl")
@@ -108,71 +130,7 @@ def infer_txn_type(text: str):
 
 
 def parse_pdf_transactions(pdf_bytes: bytes) -> pd.DataFrame:
-    rows = []
-    table_rows_found = 0
-    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-        for page in pdf.pages:
-            # First pass: structured table parsing (best for bank statements)
-            for table in page.extract_tables() or []:
-                if not table or len(table) < 2:
-                    continue
-                header = [str(c).strip().lower() if c is not None else "" for c in (table[1] or [])]
-                if not any("date" in h for h in header) or not any("description" in h for h in header):
-                    continue
-                # Expected columns: #, Date, Description, Chq/Ref. No., Withdrawal, Deposit, Balance
-                for r in table[2:]:
-                    if not r or len(r) < 7:
-                        continue
-                    date_val = parse_statement_date(r[1])
-                    if pd.isna(date_val):
-                        continue
-                    desc = str(r[2] or "").replace("\n", " ").strip()
-                    ref = str(r[3] or "").replace("\n", " ").strip()
-                    wd = parse_amount_cell(r[4])
-                    dep = parse_amount_cell(r[5])
-                    if pd.isna(wd) and pd.isna(dep):
-                        continue
-                    amount = wd if not pd.isna(wd) else dep
-                    txn_type = "Expense" if not pd.isna(wd) else "Income"
-                    raw_line = f"{desc} | Ref:{ref} | Amount: INR {amount:.2f}"
-                    rows.append(
-                        {
-                            "raw_line": raw_line,
-                            "date": date_val,
-                            "amount": amount,
-                            "txn_type": txn_type,
-                        }
-                    )
-                    table_rows_found += 1
-
-            # Fallback: free-text parsing (kept for non-tabular PDFs)
-            text = page.extract_text() or ""
-            for raw_line in text.splitlines():
-                line = raw_line.strip()
-                if len(line) < 8:
-                    continue
-                amt = extract_amount(line)
-                if pd.isna(amt):
-                    continue
-                rows.append(
-                    {
-                        "raw_line": line,
-                        "date": parse_date_from_text(line),
-                        "amount": amt,
-                        "txn_type": infer_txn_type(line),
-                    }
-                )
-    # If table extraction worked, keep those rows only (avoids disclaimer noise from fallback parser)
-    if table_rows_found > 0:
-        rows = [r for r in rows if " | Ref:" in r["raw_line"] and " | Amount: INR " in r["raw_line"]]
-    out = pd.DataFrame(rows)
-    expected_cols = ["raw_line", "date", "amount", "txn_type"]
-    if out.empty:
-        return pd.DataFrame(columns=expected_cols)
-    for col in expected_cols:
-        if col not in out.columns:
-            out[col] = np.nan
-    return out[expected_cols]
+    return _parse_bank_pdf(pdf_bytes)
 
 
 def parse_csv_transactions(csv_bytes: bytes) -> pd.DataFrame:
@@ -197,57 +155,129 @@ def build_classifier_features(txn_df: pd.DataFrame) -> pd.DataFrame:
 
 
 def infer_transfer_like(raw_line: str, merchant_text: str) -> bool:
+    """
+    Mark P2P / self / rail transfers. Overrides the spend classifier when matched.
+
+    The model only knows: EMI, Food, Investment, Shopping, Travel.
+    IMPS/NEFT/RTGS peer lines (e.g. IMPS- -NAME-KKBK-XXXX) rarely contain the word
+    'transfer', so we key off rail keywords and bank-code fragments.
+    """
     s = f"{raw_line} {merchant_text}".lower()
-    transfer_tokens = [
-        "upi/mr ",
-        "upi/mrs ",
-        "upi/ms ",
-        "upi/miss ",
-        "pay to",
-        "merchant qr",
-        "self",
-        "to self",
-        "redeem",
-        "erupee",
-    ]
-    return any(tok in s for tok in transfer_tokens)
+    compact = re.sub(r"\s+", "", s)
+
+    # UPI to a person (HDFC/SBI: UPI/MR NAME, …)
+    if re.search(r"upi/(mr|mrs|ms|miss)\s", s):
+        return True
+
+    # UPI / IMPS / NEFT with payee + bank code (IMPS- -SHREYASC-KKBK-XXXX, etc.)
+    if re.search(r"\b(upi|imps|neft|rtgs)\b", s) and re.search(
+        r"-[a-z]{4,11}(?:-|\||$|\s|\d)", s
+    ):
+        return True
+
+    # Self transfers between own accounts
+    if re.search(r"\b(self\s+transfer|transfer\s+to\s+self|to\s+self\b|from\s+self\b)\b", s):
+        return True
+
+    # Rail keywords (Indian statements: IMPS-, NEFT CR, RTGS, internal FT)
+    if re.search(r"\b(imps|neft|rtgs|ift)\b", s):
+        return True
+
+    # Inter-bank fund transfer narrations (HDFC IBFUNDSTRANSFERDR, etc.)
+    if "ibfundstransfer" in compact or re.search(r"\bfunds?\s*transfer\b", s):
+        return True
+
+    # e-Rupee wallet moves
+    if "erupee" in s or "e-rupee" in s:
+        return True
+
+    return False
 
 
-def risk_profile(expense_total, income_total, category_share, forecast_net):
+def build_risk_category_shares(expense_df: pd.DataFrame, exclude: set[str]) -> dict:
+    """Category fractions for risk rules — same denominator as expense_total (excl. transfers)."""
+    spend = expense_df[~expense_df["predicted_category"].isin(exclude)]
+    denom = spend["amount"].sum()
+    if denom <= 0:
+        return {}
+    return (spend.groupby("predicted_category")["amount"].sum() / denom).to_dict()
+
+
+def risk_profile(
+    expense_total: float,
+    income_total: float,
+    category_share: dict,
+    forecast_net,
+    transfer_spend: float = 0.0,
+):
+    """
+    Rule-based risk score (0–100) from statement aggregates.
+
+    Income counts all credits. Expenses exclude outbound Transfer rows only.
+    category_share uses the same expense base as expense_total.
+    """
     score = 0
     reasons = []
-    savings_rate = (income_total - expense_total) / income_total if income_total > 0 else -1
+
+    savings_rate = (
+        (income_total - expense_total) / income_total if income_total > 0 else None
+    )
 
     if income_total <= 0:
         score += 35
-        reasons.append("No reliable income detected in uploaded statement.")
-    elif savings_rate < 0:
-        score += 30
-        reasons.append("Expenses exceed income in observed period.")
-    elif savings_rate < 0.15:
-        score += 15
-        reasons.append("Low savings rate (<15%).")
+        reasons.append("No reliable income credits in this period.")
+    elif savings_rate is not None:
+        pct = savings_rate * 100
+        if savings_rate < 0:
+            score += 30
+            reasons.append(f"Expenses exceed income (savings rate {pct:.1f}%).")
+        elif savings_rate < 0.15:
+            score += 15
+            reasons.append(f"Low savings rate ({pct:.1f}% — target ≥ 15%).")
 
     emi_share = category_share.get("EMI", 0)
     if emi_share > 0.30:
         score += 25
-        reasons.append("High EMI concentration (>30% of spending).")
+        reasons.append(f"High EMI share ({emi_share * 100:.1f}% of counted expenses).")
     elif emi_share > 0.20:
         score += 12
-        reasons.append("Moderate EMI concentration (>20%).")
+        reasons.append(f"Moderate EMI share ({emi_share * 100:.1f}% of counted expenses).")
 
     discretionary = category_share.get("Shopping", 0) + category_share.get("Travel", 0)
     if discretionary > 0.50:
         score += 20
-        reasons.append("High discretionary spend (Shopping + Travel >50%).")
+        reasons.append(
+            f"High discretionary spend ({discretionary * 100:.1f}% — Shopping + Travel)."
+        )
     elif discretionary > 0.35:
         score += 10
-        reasons.append("Moderate discretionary spend (>35%).")
+        reasons.append(
+            f"Moderate discretionary spend ({discretionary * 100:.1f}% — Shopping + Travel)."
+        )
+
+    uncl_share = category_share.get("Unclassified", 0)
+    if uncl_share > 0.25:
+        score += 10
+        reasons.append(
+            f"Many expenses unclassified ({uncl_share * 100:.1f}% of counted spend)."
+        )
+
+    outflow_base = expense_total + transfer_spend
+    if transfer_spend > 0 and outflow_base > 0:
+        xfer_pct = transfer_spend / outflow_base * 100
+        if xfer_pct >= 50:
+            score += 8
+            reasons.append(
+                f"Most outflows are transfers ({xfer_pct:.1f}% of transfers + counted expenses)."
+            )
 
     if forecast_net is not None and forecast_net < 0:
         score += 20
-        reasons.append("Forecasted next-month net cash flow is negative.")
+        reasons.append(
+            f"Forecast next-month net is negative (₹{forecast_net:,.0f})."
+        )
 
+    score = min(100, score)
     if score >= 55:
         level = "High Risk"
     elif score >= 30:
@@ -282,59 +312,56 @@ def build_forecast_features(monthly_df: pd.DataFrame, payload: dict):
     return base
 
 
-def build_advisor_context(
-    feat_df: pd.DataFrame,
-    cat_summary: pd.DataFrame,
-    income_total: float,
-    expense_total: float,
-    forecast_expense,
-    forecast_income,
-    forecast_net,
-    risk_level: str,
-    risk_score: int,
-    risk_reasons: list,
-) -> str:
-    top_cats = cat_summary.head(8).to_dict(orient="records") if not cat_summary.empty else []
-    sample_txns = (
-        feat_df[["date", "txn_type", "amount", "predicted_category", "raw_line"]]
-        .head(15)
-        .to_dict(orient="records")
+ADVISOR_SYSTEM_PROMPT = """You are FinGuide — a friendly personal finance coach for someone in India.
+
+You receive an anonymized summary (totals and categories only — no names, account numbers, or raw bank lines).
+Talk like a helpful human, not a report generator.
+
+Conversation style:
+- Start with a short, direct answer to what they asked (1–2 sentences).
+- Use "you" and "your". It's okay to say "looks like" or "I'd watch out for" when inferring.
+- Use ₹ and round to whole rupees unless they ask for decimals.
+- Keep most replies under 150 words unless they ask for a deep dive.
+- Use short paragraphs or a few bullets — avoid long numbered reports unless they ask for a plan.
+- If they say hi or ask something vague, greet them and offer 2–3 things you can help with based on their data.
+- Reference specific numbers from the context (categories, net cash flow, risk score).
+- One follow-up question at the end is fine ("Want me to break down Food spend?").
+
+When they want a full plan, then give: quick diagnosis → 3 prioritized actions with ₹ where possible → one risk → 30-day checklist.
+
+Never: guaranteed returns, illegal tax tricks, medical/legal advice.
+If data is missing, say what you'd need — don't guess."""
+
+
+inject_styles()
+
+with st.sidebar:
+    st.markdown(
+        '<p style="font-family:Fraunces,serif;font-size:1.35rem;font-weight:700;margin:0 0 0.25rem;color:#f3f4f6;">FinGuide</p>',
+        unsafe_allow_html=True,
     )
-    context = {
-        "summary": {
-            "transaction_rows": int(len(feat_df)),
-            "income_total": round(float(income_total), 2),
-            "expense_total": round(float(expense_total), 2),
-            "net_observed": round(float(income_total - expense_total), 2),
-        },
-        "category_spending_top": top_cats,
-        "forecast": {
-            "next_month_expense": None if forecast_expense is None else round(float(forecast_expense), 2),
-            "next_month_income": None if forecast_income is None else round(float(forecast_income), 2),
-            "next_month_net_cash_flow": None if forecast_net is None else round(float(forecast_net), 2),
-        },
-        "risk_profile": {
-            "level": risk_level,
-            "score_100": int(risk_score),
-            "reasons": risk_reasons,
-        },
-        "sample_transactions": sample_txns,
-    }
-    return str(context)
-
-
-st.title("AI-Powered Personal Finance Advisor")
-st.caption("Upload bank statement PDF/CSV -> classify transactions, forecast cash flow, and estimate risk profile.")
-
-uploaded_files = st.file_uploader(
-    "Upload statement files (PDF or CSV). You can upload multiple files.",
-    type=["pdf", "csv"],
-    accept_multiple_files=True,
-)
+    st.caption("Runs on your bank statements")
+    uploaded_files = st.file_uploader(
+        "Statement (PDF or CSV)",
+        type=["pdf", "csv"],
+        accept_multiple_files=True,
+        key="statement_uploader",
+    )
+    st.divider()
+    section = st.radio("Navigate", NAV_OPTIONS, label_visibility="collapsed")
+    st.divider()
+    with st.expander("Privacy & data", expanded=False):
+        st.markdown(PRIVACY_SIDEBAR_NOTE)
 
 if not uploaded_files:
-    st.info("Upload at least one statement to run analysis.")
+    render_landing()
     st.stop()
+
+# Reset advisor chat when the user uploads different files (session-only data hygiene)
+_upload_fp = uploads_fingerprint(uploaded_files)
+if st.session_state.get("upload_fp") != _upload_fp:
+    st.session_state.upload_fp = _upload_fp
+    st.session_state.pop("advisor_messages", None)
 
 all_txn = []
 for uf in uploaded_files:
@@ -365,10 +392,7 @@ if txn_df.empty:
 
 txn_df["date"] = pd.to_datetime(txn_df["date"], errors="coerce")
 
-st.subheader("Parsed Transactions")
-st.write(f"Detected transaction rows: **{len(txn_df):,}**")
-
-# Classification block
+# ── Classification ──────────────────────────────────────────────────────────
 if not os.path.exists(CLASSIFIER_PATH):
     st.error(f"Missing classifier model: `{CLASSIFIER_PATH}`")
     st.stop()
@@ -396,11 +420,9 @@ pred_labels[transfer_mask.values] = "Transfer"
 pred_labels[(~transfer_mask).values & low_conf_mask.values] = "Unclassified"
 feat_df["predicted_category"] = pred_labels
 
-# Unified transaction table (parsed + predicted) moved under Parsed Transactions
 show_cols = ["source_file", "date", "txn_type", "amount", "predicted_category", "raw_line"]
 if "pred_confidence" in feat_df.columns:
     show_cols.insert(5, "pred_confidence")
-st.dataframe(feat_df[show_cols], use_container_width=True, height=420)
 
 # Focus classification on expenses
 expense_df = feat_df[feat_df["txn_type"] == "Expense"].copy()
@@ -408,41 +430,43 @@ if expense_df.empty:
     expense_df = feat_df.copy()
 
 cat_summary = (
-    expense_df.groupby("predicted_category")["amount"]
-    .sum()
-    .sort_values(ascending=False)
-    .rename("spend_amount")
+    expense_df.groupby("predicted_category")
+    .agg(spend_amount=("amount", "sum"), txn_count=("amount", "count"))
+    .sort_values("spend_amount", ascending=False)
     .reset_index()
 )
 total_expense = cat_summary["spend_amount"].sum() if not cat_summary.empty else 0.0
-cat_summary["share_pct"] = (cat_summary["spend_amount"] / total_expense * 100).round(2) if total_expense > 0 else 0
+cat_summary["share_pct"] = (
+    (cat_summary["spend_amount"] / total_expense * 100).round(2) if total_expense > 0 else 0
+)
 
-st.subheader("Category Spending Analysis")
-if cat_summary.empty:
-    st.warning("No expense-like transactions found for category analysis.")
-else:
-    c1, c2 = st.columns([1, 1])
-    with c1:
-        st.dataframe(cat_summary, use_container_width=True)
-    with c2:
-        fig = px.pie(cat_summary, names="predicted_category", values="spend_amount", title="Spending Mix by Category")
-        st.plotly_chart(fig, use_container_width=True)
-    top_cat = cat_summary.iloc[0]["predicted_category"]
-    top_amt = cat_summary.iloc[0]["spend_amount"]
-    st.success(f"Highest spend category: **{top_cat}** (INR {top_amt:,.2f})")
-
-# Regression block
 forecast_expense = None
 forecast_income = None
 forecast_net = None
+monthly = pd.DataFrame()
 
+# Outbound transfers excluded from spend totals; inbound transfer credits stay in income
+_excl = {"Transfer"}
 income_total = feat_df.loc[feat_df["txn_type"] == "Income", "amount"].sum()
-expense_total = feat_df.loc[feat_df["txn_type"] == "Expense", "amount"].sum()
+expense_total = feat_df.loc[
+    (feat_df["txn_type"] == "Expense") & (~feat_df["predicted_category"].isin(_excl)),
+    "amount",
+].sum()
+transfer_out_total = feat_df.loc[
+    (feat_df["predicted_category"] == "Transfer") & (feat_df["txn_type"] == "Expense"),
+    "amount",
+].sum()
+transfer_in_total = feat_df.loc[
+    (feat_df["predicted_category"] == "Transfer") & (feat_df["txn_type"] == "Income"),
+    "amount",
+].sum()
+net_total = income_total - expense_total
 
-st.subheader("Cash Flow Forecast")
-if not os.path.exists(REGRESSOR_PATH):
-    st.warning(f"Missing regressor model: `{REGRESSOR_PATH}`. Forecast skipped.")
-else:
+# Risk/health ratios: shares of counted expenses only (matches expense_total denominator)
+share_map = build_risk_category_shares(expense_df, _excl)
+
+forecast_note = None
+if os.path.exists(REGRESSOR_PATH):
     reg_payload = joblib.load(REGRESSOR_PATH)
     txn_monthly = feat_df.copy()
     txn_monthly["YearMonth"] = txn_monthly["date"].dt.to_period("M")
@@ -463,25 +487,189 @@ else:
 
     feature_dict = build_forecast_features(monthly, reg_payload)
     if feature_dict is None:
-        st.warning("Not enough monthly history to forecast. Upload statements spanning more months.")
+        forecast_note = "Need more months of data for a reliable forecast."
     else:
         exp_cols = reg_payload["features"]["expense"]
         inc_cols = reg_payload["features"]["income"]
         net_cols = reg_payload["features"]["net"]
-
         x_exp = pd.DataFrame([{k: feature_dict[k] for k in exp_cols}])
         x_inc = pd.DataFrame([{k: feature_dict[k] for k in inc_cols}])
         x_net = pd.DataFrame([{k: feature_dict[k] for k in net_cols}])
-
         forecast_expense = float(reg_payload["expense_model"].predict(x_exp)[0])
         forecast_income = float(reg_payload["income_model"].predict(x_inc)[0])
         forecast_net = float(reg_payload["net_model"].predict(x_net)[0])
+else:
+    forecast_note = "Forecast model not found. Train `expense_forecasting.ipynb` first."
 
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Forecast Next-Month Expense", f"INR {forecast_expense:,.2f}")
-        c2.metric("Forecast Next-Month Income", f"INR {forecast_income:,.2f}")
-        c3.metric("Forecast Next-Month Net Cash Flow", f"INR {forecast_net:,.2f}")
+level, score, reasons = risk_profile(
+    expense_total, income_total, share_map, forecast_net, transfer_spend=transfer_out_total
+)
 
+file_names = [uf.name for uf in uploaded_files]
+render_main_header(len(feat_df), file_names)
+render_stat_row(
+    income_total, expense_total, net_total, len(feat_df), transfer_out_total, transfer_in_total
+)
+st.caption(
+    "Income includes all credits (including transfer-ins). Expenses exclude outbound transfers only. "
+    "Risk score uses the same bases."
+)
+
+try:
+    _pdf_bytes = build_summary_pdf(
+        file_names=file_names,
+        txn_count=len(feat_df),
+        income_total=income_total,
+        expense_total=expense_total,
+        net_total=net_total,
+        transfer_out=transfer_out_total,
+        transfer_in=transfer_in_total,
+        risk_level=level,
+        risk_score=score,
+        risk_reasons=reasons,
+        cat_summary=cat_summary,
+        forecast_expense=forecast_expense,
+        forecast_income=forecast_income,
+        forecast_net=forecast_net,
+        forecast_note=forecast_note,
+        monthly=monthly,
+    )
+    render_pdf_download_button(
+        label="Download PDF report",
+        data=_pdf_bytes,
+        file_name="finguide_summary.pdf",
+        mime="application/pdf",
+        help_text="Summary, risk, category table, spending pie chart, and cash-flow chart",
+    )
+except Exception as _pdf_err:
+    st.caption(f"PDF export unavailable: {_pdf_err}")
+
+st.divider()
+
+if section == "Overview":
+    # ── Row 1: risk + pie chart ──────────────────────────────────────────────
+    col_a, col_b = st.columns([1, 1], gap="large")
+    with col_a:
+        section_heading("Risk profile")
+        render_risk_block(level, score, reasons)
+    with col_b:
+        if not cat_summary.empty:
+            section_heading(
+                "Spending by category",
+                f"All {int(cat_summary['txn_count'].sum()):,} expense rows · amounts in ₹",
+            )
+            fig_ov = spending_pie_chart(cat_summary)
+            if fig_ov is not None:
+                st.plotly_chart(fig_ov, use_container_width=True)
+
+    st.divider()
+
+    # ── Row 2: next-month forecast (full width, no nesting) ──────────────────
+    if forecast_net is not None:
+        section_heading("Next-month forecast", "Ridge regression on your monthly history")
+        fa, fb, fc = st.columns(3)
+        fa.metric("Expected expense", f"₹{forecast_expense:,.0f}")
+        fb.metric("Expected income", f"₹{forecast_income:,.0f}")
+        fc.metric(
+            "Expected net",
+            f"₹{forecast_net:,.0f}",
+            delta=f"{'Positive' if forecast_net >= 0 else 'Negative'}",
+            delta_color="normal" if forecast_net >= 0 else "inverse",
+        )
+    elif forecast_note:
+        st.warning(forecast_note)
+
+    st.divider()
+
+    # ── Row 3: financial health formulas ────────────────────────────────────
+    section_heading(
+        "Financial health formulas",
+        "Standard ratios calculated from your statement",
+    )
+
+    savings_rate = ((income_total - expense_total) / income_total * 100) if income_total > 0 else 0.0
+    expense_ratio = (expense_total / income_total * 100) if income_total > 0 else 0.0
+    emi_ratio = (share_map.get("EMI", 0) * 100)
+    discr_ratio = ((share_map.get("Shopping", 0) + share_map.get("Travel", 0)) * 100)
+
+    h1, h2, h3, h4 = st.columns(4)
+    h1.metric(
+        "Savings rate",
+        f"{savings_rate:.1f}%",
+        delta="Target ≥ 20%",
+        delta_color="normal" if savings_rate >= 20 else "inverse",
+        help="(Income − Expenses) ÷ Income × 100",
+    )
+    h2.metric(
+        "Expense ratio",
+        f"{expense_ratio:.1f}%",
+        delta="Target ≤ 80%",
+        delta_color="normal" if expense_ratio <= 80 else "inverse",
+        help="Expenses ÷ Income × 100",
+    )
+    h3.metric(
+        "EMI burden",
+        f"{emi_ratio:.1f}%",
+        delta="Target ≤ 30%",
+        delta_color="normal" if emi_ratio <= 30 else "inverse",
+        help="EMI spend ÷ Total expenses × 100",
+    )
+    h4.metric(
+        "Discretionary spend",
+        f"{discr_ratio:.1f}%",
+        delta="Target ≤ 35%",
+        delta_color="normal" if discr_ratio <= 35 else "inverse",
+        help="(Shopping + Travel) ÷ Total expenses × 100",
+    )
+
+    st.caption(
+        "Savings rate = (Income − Expenses) ÷ Income × 100  ·  "
+        "Expense ratio = Expenses ÷ Income × 100  ·  "
+        "EMI burden = EMI ÷ Total expenses × 100  ·  "
+        "Discretionary = (Shopping + Travel) ÷ Total expenses × 100"
+    )
+
+elif section == "Spending":
+    section_heading(
+        "Spending breakdown",
+        f"Every expense category · {int(cat_summary['txn_count'].sum()) if not cat_summary.empty else 0:,} rows",
+    )
+    if cat_summary.empty:
+        st.warning("No expense-like transactions found for category analysis.")
+    else:
+        c1, c2 = st.columns([1, 1], gap="large")
+        with c1:
+            display_cats = cat_summary.copy()
+            display_cats["spend_amount"] = display_cats["spend_amount"].map(lambda x: f"₹{x:,.2f}")
+            display_cats = display_cats.rename(
+                columns={
+                    "predicted_category": "Category",
+                    "spend_amount": "Total (₹)",
+                    "txn_count": "Rows",
+                    "share_pct": "Share %",
+                }
+            )
+            st.dataframe(display_cats, use_container_width=True, hide_index=True)
+        with c2:
+            section_heading("Spending mix")
+            fig = spending_pie_chart(cat_summary)
+            if fig is not None:
+                st.plotly_chart(fig, use_container_width=True)
+        top = cat_summary.iloc[0]
+        st.caption(
+            f"Top: **{top['predicted_category']}** · ₹{top['spend_amount']:,.2f} "
+            f"({top['share_pct']}% · {int(top['txn_count'])} rows)"
+        )
+
+elif section == "Forecast":
+    section_heading("Cash flow forecast", "Walk-forward trained regressors")
+    if forecast_note:
+        st.warning(forecast_note)
+    elif forecast_expense is not None:
+        f1, f2, f3 = st.columns(3)
+        f1.metric("Next-month expense", f"₹{forecast_expense:,.2f}")
+        f2.metric("Next-month income", f"₹{forecast_income:,.2f}")
+        f3.metric("Next-month net", f"₹{forecast_net:,.2f}")
         if len(monthly) > 0:
             plot_df = monthly.copy()
             plot_df["YearMonth"] = plot_df["YearMonth"].astype(str)
@@ -490,103 +678,127 @@ else:
                 x="YearMonth",
                 y=["Expense_Amount", "Income_Amount", "Net_Cash_Flow"],
                 markers=True,
-                title="Historical Monthly Cash Flow",
             )
+            plotly_theme(fig2, "Monthly cash flow history")
             st.plotly_chart(fig2, use_container_width=True)
+    else:
+        st.info("Upload statements covering more months to unlock forecasting.")
 
-# Risk profile
-st.subheader("Risk Profile")
-share_map = {}
-if total_expense > 0 and not cat_summary.empty:
-    share_map = dict(zip(cat_summary["predicted_category"], cat_summary["share_pct"] / 100.0))
+elif section == "Transactions":
+    section_heading("All transactions", f"{len(feat_df):,} rows from your upload")
+    txn_display = feat_df[show_cols].copy()
+    if "raw_line" in txn_display.columns:
+        txn_display["raw_line"] = txn_display["raw_line"].map(redact_narration)
+    st.caption("Narrations are masked in the table (full text stays in memory for parsing/classification only).")
+    st.dataframe(txn_display, use_container_width=True, height=520)
 
-level, score, reasons = risk_profile(expense_total, income_total, share_map, forecast_net)
-color = {"Low Risk": "green", "Medium Risk": "orange", "High Risk": "red"}[level]
-st.markdown(f"**Risk Level:** :{color}[{level}]  \n**Risk Score:** {score}/100")
-for r in reasons:
-    st.write(f"- {r}")
-
-# LLM advisor chat block
-st.subheader("Financial Advisor Chat")
-groq_key = os.getenv("GROQ_API_KEY", "").strip()
-groq_model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile").strip()
-
-if ChatGroq is None:
-    st.warning("LangChain Groq package missing. Install requirements and restart app.")
-elif not groq_key:
-    st.info("Add `GROQ_API_KEY` to `.env` file to enable advisor chat.")
-else:
-    if "advisor_messages" not in st.session_state:
-        st.session_state.advisor_messages = []
-
-    context_blob = build_advisor_context(
-        feat_df=feat_df,
-        cat_summary=cat_summary,
-        income_total=income_total,
-        expense_total=expense_total,
-        forecast_expense=forecast_expense,
-        forecast_income=forecast_income,
-        forecast_net=forecast_net,
-        risk_level=level,
-        risk_score=score,
-        risk_reasons=reasons,
+elif section == "Advisor":
+    section_heading(
+        "FinGuide Advisor",
+        "Cloud chat uses anonymized totals only — no raw statement lines leave your machine.",
     )
-
-    advisor_prompt = ChatPromptTemplate.from_messages(
-        [
-            (
-                "system",
-                (
-                    "You are FinGuide, an Indian personal finance advisor.\n"
-                    "You MUST use the model output context as primary evidence.\n"
-                    "Never claim guaranteed returns, never ask user to take illegal tax shortcuts, "
-                    "and never provide medical/legal advice.\n\n"
-                    "Response quality rubric (always satisfy):\n"
-                    "1) Give a plain-language diagnosis in 2-4 bullets.\n"
-                    "2) Give a prioritized action plan with exact numbers where possible.\n"
-                    "3) Mention one key risk and one fallback option.\n"
-                    "4) If data is incomplete, state what is missing.\n"
-                    "5) End with a 30-day practical checklist.\n\n"
-                    "Tone: practical, supportive, direct. Avoid fluff."
-                ),
-            ),
-            ("system", "MODEL_OUTPUT_CONTEXT:\n{context_blob}"),
-            MessagesPlaceholder("history"),
-            ("human", "{user_query}"),
-        ]
+    st.caption(
+        "Groq receives category totals, risk score, and your chat messages — not PDFs or full narrations."
     )
+    groq_key = os.getenv("GROQ_API_KEY", "").strip()
+    groq_model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile").strip()
 
-    # Render chat history
-    for msg in st.session_state.advisor_messages:
-        with st.chat_message(msg["role"]):
-            st.markdown(msg["content"])
+    if ChatGroq is None:
+        st.warning("Install LangChain Groq (`pip install langchain-groq`) and restart.")
+    elif not groq_key:
+        st.info("Add `GROQ_API_KEY` to your `.env` file to enable chat.")
+    else:
+        if "advisor_messages" not in st.session_state:
+            st.session_state.advisor_messages = []
 
-    user_q = st.chat_input("Ask for advice (budgeting, spending cuts, risk reduction, savings plan)...")
-    if user_q:
-        st.session_state.advisor_messages.append({"role": "user", "content": user_q})
-        with st.chat_message("user"):
-            st.markdown(user_q)
-
-        llm = ChatGroq(api_key=groq_key, model=groq_model, temperature=0.15)
-        history_msgs = []
-        for m in st.session_state.advisor_messages[-8:]:
-            if m["role"] == "user":
-                history_msgs.append(HumanMessage(content=m["content"]))
-            else:
-                history_msgs.append(AIMessage(content=m["content"]))
-
-        lc_messages = advisor_prompt.format_messages(
-            context_blob=context_blob,
-            history=history_msgs,
-            user_query=user_q,
+        context_blob = build_advisor_context(
+            feat_df=feat_df,
+            cat_summary=cat_summary,
+            income_total=income_total,
+            expense_total=expense_total,
+            forecast_expense=forecast_expense,
+            forecast_income=forecast_income,
+            forecast_net=forecast_net,
+            risk_level=level,
+            risk_score=score,
+            risk_reasons=reasons,
         )
 
-        try:
-            resp = llm.invoke(lc_messages)
-            answer = resp.content if hasattr(resp, "content") else str(resp)
-        except Exception as e:
-            answer = f"Could not get LLM response right now: {e}"
+        advisor_prompt = ChatPromptTemplate.from_messages(
+            [
+                ("system", ADVISOR_SYSTEM_PROMPT),
+                ("system", "ANONYMIZED_STATEMENT_SUMMARY:\n{context_blob}"),
+                MessagesPlaceholder("history"),
+                ("human", "{user_query}"),
+            ]
+        )
 
-        st.session_state.advisor_messages.append({"role": "assistant", "content": answer})
-        with st.chat_message("assistant"):
-            st.markdown(answer)
+        head_l, head_r = st.columns([4, 1])
+        with head_r:
+            if st.button("Clear chat", use_container_width=True):
+                st.session_state.advisor_messages = []
+                st.rerun()
+
+        chat_box = st.container(height=400)
+        with chat_box:
+            if not st.session_state.advisor_messages:
+                with st.chat_message("assistant"):
+                    top_cat = (
+                        cat_summary.iloc[0]["predicted_category"]
+                        if not cat_summary.empty
+                        else "your categories"
+                    )
+                    st.markdown(
+                        f"Hey — I've looked through **{len(feat_df):,}** transactions from your upload.\n\n"
+                        f"You're at **₹{net_total:,.0f}** net cash flow this period, "
+                        f"risk is **{level}**, and your biggest spend bucket is **{top_cat}**.\n\n"
+                        "Ask me anything — where you're overspending, how to save more, "
+                        "or what that risk score actually means."
+                    )
+            for msg in st.session_state.advisor_messages:
+                with st.chat_message(msg["role"]):
+                    st.markdown(msg["content"])
+
+        st.caption("Quick prompts — tap to fill the box, then send")
+        p1, p2, p3 = st.columns(3)
+        suggestions = [
+            p1.button("Where am I overspending?", use_container_width=True),
+            p2.button("How can I save more?", use_container_width=True),
+            p3.button("Explain my risk score", use_container_width=True),
+        ]
+        preset = None
+        if suggestions[0]:
+            preset = "Where am I overspending?"
+        elif suggestions[1]:
+            preset = "How can I save more this month?"
+        elif suggestions[2]:
+            preset = "Explain my risk score in simple terms."
+
+        user_q = st.chat_input("Ask FinGuide anything about your money…", key="advisor_chat_input")
+        send_q = preset or user_q
+
+        if send_q:
+            st.session_state.advisor_messages.append({"role": "user", "content": send_q})
+            llm = ChatGroq(api_key=groq_key, model=groq_model, temperature=0.45)
+            history_msgs = []
+            for m in st.session_state.advisor_messages[:-1][-10:]:
+                if m["role"] == "user":
+                    history_msgs.append(HumanMessage(content=m["content"]))
+                else:
+                    history_msgs.append(AIMessage(content=m["content"]))
+            lc_messages = advisor_prompt.format_messages(
+                context_blob=context_blob,
+                history=history_msgs,
+                user_query=send_q,
+            )
+            try:
+                with st.spinner("FinGuide is typing…"):
+                    resp = llm.invoke(lc_messages)
+                answer = resp.content if hasattr(resp, "content") else str(resp)
+            except Exception as e:
+                answer = (
+                    "Sorry — I couldn't reach the model just now. "
+                    f"Try again in a moment. ({e})"
+                )
+            st.session_state.advisor_messages.append({"role": "assistant", "content": answer})
+            st.rerun()

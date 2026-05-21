@@ -9,6 +9,7 @@ jupyter
 notebook
 ipykernel
 streamlit
+fpdf2
 pdfplumber
 plotly
 python-dotenv
