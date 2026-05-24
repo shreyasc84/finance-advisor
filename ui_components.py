@@ -391,7 +391,7 @@ def render_landing():
             <h2>Your finances, decoded</h2>
             <p>Upload a bank statement PDF or CSV from the sidebar. FinGuide categorizes every transaction, forecasts next-month cash flow, scores your risk, and answers questions.</p>
             <p style="font-size:0.85rem;color:#6b7280;margin-top:1rem;">
-                Your file stays on this device. Advisor chat only sends anonymized totals to Groq — never your full statement.
+                Uploads are processed in your Streamlit session (not saved to disk). Advisor chat only sends anonymized totals to Groq — never your full statement.
             </p>
         </div>
         """,

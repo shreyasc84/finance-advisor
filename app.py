@@ -2,7 +2,6 @@ import io
 import os
 import re
 from datetime import datetime
-
 import joblib
 import numpy as np
 import pandas as pd
@@ -695,7 +694,7 @@ elif section == "Transactions":
 elif section == "Advisor":
     section_heading(
         "FinGuide Advisor",
-        "Cloud chat uses anonymized totals only — no raw statement lines leave your machine.",
+        "Optional cloud chat sends anonymized totals only — not your PDF or raw statement lines.",
     )
     st.caption(
         "Groq receives category totals, risk score, and your chat messages — not PDFs or full narrations."
@@ -706,7 +705,9 @@ elif section == "Advisor":
     if ChatGroq is None:
         st.warning("Install LangChain Groq (`pip install langchain-groq`) and restart.")
     elif not groq_key:
-        st.info("Add `GROQ_API_KEY` to your `.env` file to enable chat.")
+        st.info(
+            "Add `GROQ_API_KEY` in Streamlit **Secrets** (Cloud) or `.env` (local) to enable chat."
+        )
     else:
         if "advisor_messages" not in st.session_state:
             st.session_state.advisor_messages = []

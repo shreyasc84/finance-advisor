@@ -92,7 +92,13 @@ def build_advisor_context(
     return "\n".join(lines)
 
 
-PRIVACY_SIDEBAR_NOTE = (
-    "**Privacy:** Parsing and ML run on your device. Statements are not saved to disk. "
-    "Advisor sends only **anonymized totals** to Groq (no narration lines)."
-)
+PRIVACY_SIDEBAR_NOTE = """\
+**Data handling**
+
+FinGuide runs on **Streamlit** over HTTPS. Your upload is processed in **server memory** for this session only — not saved to disk and not stored in a database.
+
+**In the app**
+- Parsing, ML, charts, and PDF export use session data only
+- Transaction narrations are **masked** in the table view
+- Session ends when you close the tab; chat resets on new uploads
+"""
