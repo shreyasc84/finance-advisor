@@ -6,8 +6,6 @@ Designed for local runs and **[Streamlit Community Cloud](https://streamlit.io/c
 
 ## Architecture (high level)
 
-> **Preview note:** Cursor/VS Code markdown preview often shows Mermaid as plain text. On **GitHub**, this renders as a diagram automatically.
-
 ```mermaid
 flowchart TB
     U[User] -->|PDF or CSV| ST[Streamlit app]
